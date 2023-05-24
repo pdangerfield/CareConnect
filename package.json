@@ -1,0 +1,28 @@
+{
+  "name": "careconnect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdangerfield/CareConnect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdangerfield/CareConnect/issues"
+  },
+  "homepage": "https://github.com/pdangerfield/CareConnect#readme",
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.2",
+    "sequelize": "^6.31.1"
+  }
+}
