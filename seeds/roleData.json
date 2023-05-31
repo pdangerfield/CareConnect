@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 1
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 1
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 2
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 2
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 3
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 3
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 4
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 4
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 5
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 5
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 6
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 6
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 7
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 7
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 8
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 8
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 9
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 9
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department-id": 10
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department-id": 10
+    }
+]
