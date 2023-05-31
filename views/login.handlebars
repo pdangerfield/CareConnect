@@ -1,0 +1,47 @@
+<body>
+  <div class="container">
+    <h2>Welcome back.</h2>
+    <form>
+      <label for="email-login">Email:</label>
+      <input type="text" id="email-login" name="email" required>
+      
+      <label for="password-login">Password:</label>
+      <input type="password" id="password-login" name="password" required>
+      
+      <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="openModal()">Create Account</a></p>
+
+    <!-- Modal -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Create Account</h2>
+        <form>
+          <label for="name-signup">Name:</label>
+          <input type="text" id="name-signup" name="name" required>
+          
+          <label for="email-signup">Email:</label>
+          <input type="email" id="email-signup" name="email" required>
+          
+          <label for="password-signup">Password:</label>
+          <input type="password" id="password-signup" name="password" required>
+          
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openModal() {
+        var modal = document.getElementById("signupModal");
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("signupModal");
+        modal.style.display = "none";
+      }
+    </script>
+  </div>
+</body>
