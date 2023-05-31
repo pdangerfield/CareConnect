@@ -1,0 +1,17 @@
+<div>
+  <canvas id="employeeChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  fetch('/api/employees') .then(response => response.json()) .then(data => {
+  const departments = {}; data.forEach(employee => { const department =
+  employee.role.department_id; departments[department] = departments[department]
+  ? departments[department] + 1 : 1; }); const departmentNames =
+  Object.keys(departments); const employeeCounts = Object.values(departments);
+  const ctx = document.getElementById('employeeChart').getContext('2d'); new
+  Chart(ctx, { type: 'bar', data: { labels: departmentNames, datasets: [{ label:
+  'Number of Employees', data: employeeCounts, backgroundColor: 'rgba(75, 192,
+  192, 0.2)', borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1 }] },
+  options: { scales: { y: { beginAtZero: true, precision: 0 } } } }); });
+</script>
