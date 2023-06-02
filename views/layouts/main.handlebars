@@ -10,12 +10,7 @@
       <h2>CareConnect</h2>
     </aside>
     <div class="login">
-        {{#if loggedIn}}
-        {{> homepage}}
-        {{else}}
-        {{> login}}
-        {{/if}}
-      
+      {{{ body }}}
     </div>
   </main>
     <script src="public/js/login.js"></script>
