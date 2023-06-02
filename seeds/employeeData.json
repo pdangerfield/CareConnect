@@ -2,67 +2,68 @@
     {
         "first_name": "John",
         "last_name": "Doe",
-        "role-id": 1,
-        "manager_id": "NULL"
+        "role_id": 1,
+        "manager_id": null
     },
     {
         "first_name": "Tom",
         "last_name": "Allen",
-        "role-id": 2,
-        "manager_id": "NULL"
+        "role_id": 2,
+        "manager_id": null
     },
     {
         "first_name": "Kira",
         "last_name": "Nerys",
-        "role-id": 3,
-        "manager_id": "NULL"
+        "role_d": 3,
+        "manager_id": null
     },
     {
         "first_name": "Ray",
         "last_name": "Charles",
-        "role-id": 4,
-        "manager_id": "NULL"
+        "role_id": 4,
+        "manager_id": null
     },
     {
         "first_name": "Roger",
         "last_name": "Walter",
-        "role-id": 5,
-        "manager_id": "NULL"
+        "role_id": 5,
+        "manager_id": null
     },
     {
         "first_name": "Robert",
         "last_name": "Plant",
-        "role-id": 6,
-        "manager_id": "NULL"
+        "role_id": 6,
+        "manager_id": null
     },
     {
         "first_name": "Ann",
         "last_name": "wilson",
-        "role-id": 7,
-        "manager_id": "NULL"
+        "role_id": 7,
+        "manager_id": null
     },
     {
         "first_name": "Simon",
         "last_name": "Tarses",
-        "role-id": 8,
-        "manager_id": "NULL"
+        "role_id": 8,
+        "manager_id": null
     },
     {
         "first_name": "Louis",
         "last_name": "Philip",
-        "role-id": 9,
-        "manager_id": "NULL"
+        "role_id": 9,
+        "manager_id": null
     },
     {
         "first_name": "John",
         "last_name": "Abraham",
-        "role-id": 10,
-        "manager_id": "NULL"
+        "role_id": 10,
+        "manager_id": null
     },
     {
         "first_name": "Clark",
         "last_name": "Smith",
-        "role-id": 11, "manager_id": "NULL"
+        "role_id": 11,
+        "manager_id": null
     }
 
 ]
