@@ -18,7 +18,7 @@ department.init(
     },
     {
         sequelize,
-        freezeTableNAme: true,
+        freezeTableName: true,
         underscored: true,
         modelName: 'department'
     }

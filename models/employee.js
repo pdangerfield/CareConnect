@@ -39,7 +39,7 @@ employee.init(
     },
     {
         sequelize,
-        freezeTableNAme: true,
+        freezeTableName: true,
         underscored: true,
         modelName: 'employee,'
     }
