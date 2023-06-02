@@ -14,13 +14,13 @@ const seedDatabase = async() => {
     await  User.bulkcreate(userData);
     console.log('\n----- USERS SEEDED -----\n');
 
-    await  User.bulkcreate(departmentData);
+    await  department.bulkcreate(departmentData);
     console.log('\n----- department SEEDED -----\n');
 
-    await User.bulkcreate(roleData);
+    await role.bulkcreate(roleData);
     console.log('\n----- role SEEDED -----\n');
 
-    await User.bulkcreate(employeeData);
+    await employee.bulkcreate(employeeData);
     console.log('\n----- employee SEEDED -----\n');
 
     process.exit(0);
