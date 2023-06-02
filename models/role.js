@@ -35,7 +35,7 @@ role.init (
         sequelize,
         freezeTableNAme: true,
         underscored: true,
-        modelName: 'role,'
+        modelName: 'role'
     }
 );
 

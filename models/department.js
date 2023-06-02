@@ -20,7 +20,7 @@ department.init(
         sequelize,
         freezeTableNAme: true,
         underscored: true,
-        modelName: 'department,'
+        modelName: 'department'
     }
 );
 module.exports = department;

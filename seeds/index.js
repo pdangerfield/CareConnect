@@ -11,16 +11,16 @@ const seedDatabase = async() => {
 
     console.log('\n----- DATABASE SYNCED -----\n');
 
-    await userData ();
+    await  User.bulkcreate(userData);
     console.log('\n----- USERS SEEDED -----\n');
 
-    await departmentData();
+    await  User.bulkcreate(departmentData);
     console.log('\n----- department SEEDED -----\n');
 
-    await roleData();
+    await User.bulkcreate(roleData);
     console.log('\n----- role SEEDED -----\n');
 
-    await employeeData();
+    await User.bulkcreate(employeeData);
     console.log('\n----- employee SEEDED -----\n');
 
     process.exit(0);
