@@ -1,38 +1,28 @@
 <body>
-  <div class="container">
-    <h2>Welcome back.</h2>
-    <form class="login-form">
-      <label for="email-login">Email:</label>
-      <input type="text" id="email-login" name="email" required>
-      
-      <label for="password-login">Password:</label>
-      <input type="password" id="password-login" name="password" required>
-      
-      <button type="submit">Log In</button>
-    </form>
-    <p>Don't have an account? <a href="#" onclick="openModal()">Create Account</a></p>
-
-    <!-- Modal -->
-    <div id="signupModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Create Account</h2>
-        <form class="register-form">
-          <label for="name-signup">Name:</label>
-          <input type="text" id="name-signup" name="name" required>
+    <div class="row">
+    {{!-- logo half --}}
+      <div class="col logo-container">
+        
+        <img src="/assets/logos/main_logo.png" alt="CareConnect Logo">
+        
+      </div>
+      {{!-- login half --}}
+      <div class="col login-container">
+        <div class="col">
+          <h2>Welcome back.</h2>
+          <form class="col align-middle login-form">
+            <input class="row" type="text" placeholder="email" id="email-login" name="email" required>
+            <input class="row" type="password" placeholder="password" id="password-login" name="password" required>
           
-          <label for="email-signup">Email:</label>
-          <input type="email" id="email-signup" name="email" required>
-          
-          <label for="password-signup">Password:</label>
-          <input type="password" id="password-signup" name="password" required>
-          
-          <button type="submit">Sign Up</button>
-        </form>
+            <button type="submit">Log In</button>
+          </form>
+          <p>Don't have an account? <a href="#" onclick="openModal()">Create Account</a></p>
+        </div> 
       </div>
     </div>
 
-    <script>
+
+    {{!-- <script>
       function openModal() {
         var modal = document.getElementById("signupModal");
         modal.style.display = "block";
@@ -42,6 +32,6 @@
         var modal = document.getElementById("signupModal");
         modal.style.display = "none";
       }
-    </script>
+    </script> --}}
   </div>
 </body>

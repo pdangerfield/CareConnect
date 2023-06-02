@@ -1,3 +1,23 @@
+* {
+  --navy: #1E3163;
+  --brown: #B6715B;
+  --gray: #D9D9D9;
+  --cream: #F1D3BB;
+  font-family: 'Prompt', sans-serif;
+ }
+
+.login-container {
+  height: 100vh;
+}
+
+img {
+  display: block;
+}
+
+.logo-container{
+  height: 100vh;
+}
+ 
  /* Additional CSS for the modal */
  .modal {
     display: none;
@@ -31,4 +51,8 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .logo-container {
+    background-color: var(--navy);
   }
