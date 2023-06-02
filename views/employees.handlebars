@@ -1,7 +1,16 @@
-<section class="employees">
-  <img src="/images/{{employee.filename}}" alt="{{employee.name}}">
-  <div class="employee-details">
-    <h3>{{employee.name}}</h3>
-  
-  </div>
-</section>
+
+<h1>employees</h1>
+
+{{#each employees as |employee| }}
+
+    <p>
+     {{employee.first_name}} {{employee.last_name}}
+    </p>
+    <p>
+      role: {{employee.role_id}}
+    </p>
+
+{{/each}}
+
+<script src="/js/employees.js"></script>
+```

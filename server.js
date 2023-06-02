@@ -34,7 +34,11 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create(
+  { helpers, runtimeOptions: {
+    allowProtoPropertiesByDefault: true },
+  }
+  );
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
