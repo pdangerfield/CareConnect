@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const userRoutes = require("./user-routes");
-const departmentsRoutes = require("../department-routes.js");
+const departmentsRoutes = require("./department-routes.js");
 const employeesRoutes = require("./employee-routes.js");
 const rolesRoutes = require("./role-routes.js");
 
