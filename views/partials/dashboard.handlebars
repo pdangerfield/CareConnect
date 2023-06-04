@@ -1,17 +1,60 @@
-<div>
-  <canvas id="employeeChart"></canvas>
+
+<div class="row d-flex">
+  {{!-- controls --}}
+  <container class="col-3" id="dashboard-controls">
+    <div class="row">
+      <img src="/assets/logos/vertical_logo.svg" alt="logo" class="logo" id="vertical-logo">
+    </div>
+    <div class="row justify-content-center mx-3">
+      <ul>
+        <li class="dashboard_menu_item">
+          <img src="/assets/controls_icons/dashboard_icon_active.svg" alt="dashboard icon">
+          Dashboard</li>
+        <li class="dashboard_menu_item">
+          <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
+          Employees
+        </li>
+        <li class="dashboard_menu_item">
+          <a href="/department">
+            <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
+            Departments
+          </a>
+        </li>
+      </ul>
+    </div>
+  </container>
+  {{!-- display --}}
+  <container class="col-9" id="dashboard-display">
+    {{!-- nav bar --}}
+    <nav class="row mx-3 my-3">
+      <div class="col-9">
+        <input type="text" placeholder="name, role, or department" id="search-bar" name="search-bar">
+      </div>
+      <div class="col-2">
+        <img src="/assets/controls_icons/logout_icon.svg" alt="search icon">
+        <img src="/assets/controls_icons/profile_icon.svg" alt="search icon">
+      </div>
+    </nav>
+    {{!-- charts --}}
+    <div class="row mx-3 my-3">
+      <div>
+        <h2>Employees per department</h2>
+        <div id="employee-chart-container">
+          {{!-- <canvas id="myChart"></canvas> --}}
+        </div>
+      </div>
+      <div>
+        <h2>Cost by department</h2>
+        <div id="cost-chart-container">
+          {{!-- <canvas id="myChart"></canvas> --}}
+        </div>
+      </div>
+    </div>
+  </container>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  fetch('/api/employees') .then(response => response.json()) .then(data => {
-  const departments = {}; data.forEach(employee => { const department =
-  employee.role.department_id; departments[department] = departments[department]
-  ? departments[department] + 1 : 1; }); const departmentNames =
-  Object.keys(departments); const employeeCounts = Object.values(departments);
-  const ctx = document.getElementById('employeeChart').getContext('2d'); new
-  Chart(ctx, { type: 'bar', data: { labels: departmentNames, datasets: [{ label:
-  'Number of Employees', data: employeeCounts, backgroundColor: 'rgba(75, 192,
-  192, 0.2)', borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1 }] },
-  options: { scales: { y: { beginAtZero: true, precision: 0 } } } }); });
-</script>
+
+
+
+
+

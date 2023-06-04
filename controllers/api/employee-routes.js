@@ -13,6 +13,7 @@ router.get("/", withAuth, async (req, res) => {
 
 // Add an employee
 router.post("/", withAuth, async (req, res) => {
+
   try {
     // Extract form data
     const { first_name, last_name, role_id, manager_id } = req.body;
@@ -63,6 +64,7 @@ router.put("/employees/:id", async (req, res) => {
 
 // Delete an employee
 router.delete("/employees/:id", async (req, res) => {
+
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
 

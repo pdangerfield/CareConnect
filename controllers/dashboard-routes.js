@@ -2,7 +2,7 @@ const withAuth = require("../utils/auth");
 const router = require("express").Router();
 const db = require("../models");
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const employees = await db.employee.findAll({
       include: [db.role], // Include the 'role' model in the query

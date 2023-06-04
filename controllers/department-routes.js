@@ -1,28 +1,28 @@
-const withAuth = require("../../utils/auth");
-const { Department } = require("../../models");
+
+const { department } = require("../models");
 
 const router = require("express").Router();
 
-router.get("/departments", withAuth, async (req, res) => {
+router.get("/",  async (req, res) => {
   // Retrieve all departments from the database
-  const departments = await Department.findAll();
+  const departments = await department.findAll();
 
-  res.render("departments", { departments });
+  res.render("departments", { departments: departments });
 });
 
 // Add a department
-router.post("/departments", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     // Extract form data
     const { name } = req.body;
 
     // Create a new department using Sequelize's create method
-    await Department.create({
+    await department.create({
       name,
     });
 
     // Redirect to departments page
-    res.redirect("/departments");
+    res.redirect("/api/departments");
   } catch (error) {
     // Handle any errors that occur during the process
     console.error(error);
@@ -31,13 +31,13 @@ router.post("/departments", withAuth, async (req, res) => {
 });
 
 // Update a department
-router.put("/departments/:id", withAuth, async (req, res) => {
+router.put("/departments/:id", async (req, res) => {
   try {
     const departmentId = req.params.id; // Extract the department ID from the request parameters
     const { name } = req.body; // Extract updated department data from the request body
 
     // Find the department by ID
-    const department = await Department.findByPk(departmentId);
+    const departments = await department.findByPk(departmentId);
 
     // If the department doesn't exist, return an error response
     if (!department) {
@@ -60,12 +60,12 @@ router.put("/departments/:id", withAuth, async (req, res) => {
 });
 
 // Delete a department
-router.delete("/departments/:id", withAuth, async (req, res) => {
+router.delete("/departments/:id", async (req, res) => {
   try {
     const departmentId = req.params.id; // Extract the department ID from the request parameters
 
     // Find the department by ID
-    const department = await Department.findByPk(departmentId);
+    const departments = await department.findByPk(departmentId);
 
     // If the department doesn't exist, return an error response
     if (!department) {
