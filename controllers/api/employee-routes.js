@@ -1,9 +1,20 @@
 const withAuth = require("../../utils/auth");
+
 const { employee } = require("../../models");
 
 const router = require("express").Router();
 
 router.get("/", async (req, res) => {
+
+  // Retrieve all employees from the database
+  const employees = await employee.findAll();
+
+  res.render("employees", { employees: employees });
+});
+
+// Add an employee
+router.post("/employees", async (req, res) => {
+
   try {
     // Retrieve employee data from the database
     const employees = await employee.findAll();
@@ -19,6 +30,7 @@ router.get("/", async (req, res) => {
 
 // Add an employee
 router.post("/", withAuth, async (req, res) => {
+
   try {
     // Extract form data
     const { first_name, last_name, role_id, manager_id } = req.body;
@@ -41,7 +53,8 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // Update an employee
-router.put("/:id", withAuth, async (req, res) => {
+
+router.put("/employees/:id", async (req, res) => {
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
     const { first_name, last_name, role_id, manager_id } = req.body; // Extract updated employee data from the request body
@@ -73,7 +86,9 @@ router.put("/:id", withAuth, async (req, res) => {
 });
 
 // Delete an employee
-router.delete("/:id", withAuth, async (req, res) => {
+
+router.delete("/employees/:id", async (req, res) => {
+
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
 
