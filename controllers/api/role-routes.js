@@ -1,10 +1,14 @@
 const withAuth = require("../../utils/auth");
-const { Role } = require("../../models");
+const { role } = require("../../models");
 
 const router = require("express").Router();
 
+// Get all roles from the database and serialize them
 router.get("/roles", withAuth, async (req, res) => {
-  res.render("roles");
+  const roleData = await role.findAll();
+  const roles = roleData.map((role) => role.get({ plain: true }));
+
+  res.render("roles", { roles });
 });
 
 router.post("/roles", withAuth, async (req, res) => {
@@ -13,7 +17,7 @@ router.post("/roles", withAuth, async (req, res) => {
     const { title, salary, department } = req.body;
 
     // Create a new role using Sequelize's create method
-    await Role.create({
+    await role.create({
       title,
       salary,
       department,
@@ -31,14 +35,15 @@ router.post("/roles", withAuth, async (req, res) => {
 // Update a role
 router.put("/roles/:id", withAuth, async (req, res) => {
   try {
-    const roleId = req.params.id; // Extract the role ID from the request parameters
-    const { title, salary, department } = req.body; // Extract updated role data from the request body
+    // Extract the role ID from the request parameters and the updated role data from the request body
+    const roleId = req.params.id;
+    const { title, salary, department } = req.body;
 
     // Find the role by ID
-    const role = await Role.findByPk(roleId);
+    const updateRole = await role.findByPk(roleId);
 
     // If the role doesn't exist, return an error response
-    if (!role) {
+    if (!updateRole) {
       return res.status(404).send("Role not found");
     }
 
@@ -62,13 +67,14 @@ router.put("/roles/:id", withAuth, async (req, res) => {
 // Delete a role
 router.delete("/roles/:id", withAuth, async (req, res) => {
   try {
-    const roleId = req.params.id; // Extract the role ID from the request parameters
+    // Extract the role ID from the request parameters
+    const roleId = req.params.id;
 
     // Find the role by ID
-    const role = await Role.findByPk(roleId);
+    const deleteRole = await role.findByPk(roleId);
 
     // If the role doesn't exist, return an error response
-    if (!role) {
+    if (!deleteRole) {
       return res.status(404).send("Role not found");
     }
 
