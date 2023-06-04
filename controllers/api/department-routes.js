@@ -1,14 +1,13 @@
 const { department } = require("../../models");
 const router = require("express").Router();
 
-// Get all departments and serialize them to JSON
+// Get all departments and render the "departments" view template
 router.get("/", async (req, res) => {
   try {
     const departmentData = await department.findAll();
     const departments = departmentData.map((department) =>
       department.get({ plain: true })
     );
-
     res.render("departments", { departments });
   } catch (error) {
     console.error(error);
