@@ -1,1 +1,10 @@
 <h1>Departments</h1>
+
+<section class="card">
+  <!-- The contents of this card links to the department page using the department ID -->
+  <a href="/department/{{id}}">
+    <!-- The card contains the department name as the card header -->
+    <header>{{department_name}}</header>
+    <img src="/assets/departments_icons/{{department.[0].department_name}}" alt="{{department.[0].department_name}}">
+  </a>
+</section>
