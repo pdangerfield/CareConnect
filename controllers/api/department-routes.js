@@ -1,4 +1,4 @@
-const { department } = require("../models");
+const { department } = require("../../models");
 const router = require("express").Router();
 
 // Get all departments and serialize them to JSON
