@@ -5,10 +5,28 @@ const router = require("express").Router();
 
 // Get all roles from the database and serialize them
 router.get("/roles", withAuth, async (req, res) => {
-  const roleData = await role.findAll();
-  const roles = roleData.map((role) => role.get({ plain: true }));
+  try {
+    const roleData = await role.findAll();
+    const roles = roleData.map((role) => role.get({ plain: true }));
+    res.render("roles", { roles });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving roles.");
+  }
+});
 
-  res.render("roles", { roles });
+// Get a single role
+router.get("/roles/:id", withAuth, async (req, res) => {
+  try {
+    const roleId = req.params.id;
+    const selectedRole = await role.findByPk(roleId);
+
+    // Handle the retrieved role data (e.g., send it as a response)
+    res.render("roles", { selectedRole });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the role.");
+  }
 });
 
 router.post("/roles", withAuth, async (req, res) => {
