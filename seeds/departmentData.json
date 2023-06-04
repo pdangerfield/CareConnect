@@ -28,6 +28,9 @@
     },
     {
         "department_name": "Outpatient"
+    },
+    {
+        "department_name": "Radiology"
     }
 ]
  
