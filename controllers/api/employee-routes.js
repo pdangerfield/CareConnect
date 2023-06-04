@@ -1,31 +1,14 @@
 const withAuth = require("../../utils/auth");
-
 const { employee } = require("../../models");
-
 const router = require("express").Router();
 
-router.get("/", async (req, res) => {
-
-  // Retrieve all employees from the database
-  const employees = await employee.findAll();
-
-  res.render("employees", { employees: employees });
-});
-
-// Add an employee
-router.post("/employees", async (req, res) => {
-
-  try {
-    // Retrieve employee data from the database
-    const employees = await employee.findAll();
-
-    // Render the "employees" template and pass the employee data
-    res.render("employees", { employees });
-  } catch (error) {
-    console.error(error);
-    // Handle the error appropriately
-    res.status(500).json({ error: "Internal Server Error" });
-  }
+// Get all employees from the database and serialize them
+router.get("/", withAuth, async (req, res) => {
+  const employeeData = await employee.findAll();
+  const employees = employeeData.map((employee) =>
+    employee.get({ plain: true })
+  );
+  res.render("employees", { employees });
 });
 
 // Add an employee
@@ -42,18 +25,14 @@ router.post("/", withAuth, async (req, res) => {
       role_id,
       manager_id,
     });
-
-    // Redirect to employees page
     res.redirect("/employees");
   } catch (error) {
-    // Handle any errors that occur during the process
     console.error(error);
     res.status(500).send("An error occurred while adding a new employee.");
   }
 });
 
 // Update an employee
-
 router.put("/employees/:id", async (req, res) => {
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
@@ -76,17 +55,14 @@ router.put("/employees/:id", async (req, res) => {
     // Save the updated employee to the database
     await employeeRecord.save();
 
-    // Redirect to employees page or send a success response
     res.redirect("/employees");
   } catch (error) {
-    // Handle any errors that occur during the process
     console.error(error);
     res.status(500).send("An error occurred while updating the employee.");
   }
 });
 
 // Delete an employee
-
 router.delete("/employees/:id", async (req, res) => {
 
   try {
