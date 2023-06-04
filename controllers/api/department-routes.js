@@ -16,6 +16,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Get a single department
+router.get("/:id", async (req, res) => {
+  try {
+    const departmentId = req.params.id;
+    const selectedDepartment = await department.findByPk(departmentId);
+
+    // Handle the retrieved department data (e.g., send it as a response)
+    res.json(selectedDepartment);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
+
 // Add a department
 router.post("/", async (req, res) => {
   try {
