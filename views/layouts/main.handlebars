@@ -13,31 +13,8 @@
 
 <body>
 
-   <header>
-    <img src="/assets/logos/main_logo.png" alt="CareConnect Logo">
-  </header>
-  <div>
-    {{#if loggedIn}}
-    <a href="/dashboard">Dashboard</a>
-    <button id="logout">Logout</button>
+  {{{ body }}}
 
-    {{else}}
-
-   <!-- <a href="/dashboard">Dashboard</a>
-    <a href="/login">Login</a> -->
-    {{/if}}
-    <main>
-
-      {{{ body }}}
-
-    </main>
-  </div>
-  {{!--
-  <script src="js/login.js"></script> --}}
-
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
 </body>
 
 </html>
