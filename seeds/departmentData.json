@@ -12,13 +12,13 @@
         "department_name": "Cardiology"
     },
     {
-        "department_name": "ENT"
+        "department_name": "Laboratory"
     },
     {
         "department_name": "Gastroenterology"
     },
     {
-        "department_name": "Gynaecology"
+        "department_name": "Paramedics"
     },
     {
         "department_name": "Psychiatry "
@@ -31,6 +31,9 @@
     },
     {
         "department_name": "Radiology"
+    },
+    {
+        "department_name": "Admin"
     }
 ]
  
