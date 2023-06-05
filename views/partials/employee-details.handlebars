@@ -1,1 +1,6 @@
-<h1>Employees</h1>
+<!-- The contents of this card links to the department page using the department ID -->
+<a href="/api/employees/{{id}}">
+  <!-- The card contains the department name as the card header -->
+  <header> {{employee.first_name}} {{employee.last_name}}</header>
+  <img src="/assets/employee_images/{{id}}.png" alt=" {{employee.first_name}} {{employee.last_name}}">
+</a>

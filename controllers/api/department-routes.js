@@ -22,7 +22,7 @@ router.get("/:id", async (req, res) => {
     const selectedDepartment = await department.findByPk(departmentId);
 
     // Handle the retrieved department data (e.g., send it as a response)
-    res.json(selectedDepartment);
+    res.render("departments", { departments: [selectedDepartment] });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
