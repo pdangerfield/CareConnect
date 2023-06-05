@@ -1,17 +1,20 @@
-const newDeptFormHandler = async (event) => {
+const editDeptFormHandler = async (event) => {
     event.preventDefault();
 
     const deptName = document.querySelector('input[name="dept-name"]').value.trim();
-   
-    //alert contents
+    
+    const id = window.location.toString().split('/')[
+        window.location.toString().split('/').length -1
+    ];
+
     if (deptName) {
-        const response = await fetch(`/api/departments`, {
-            method: 'POST',
+        const response = await fetch(`/api/departments/${id}`, {
+            method: 'PUT',
             body: JSON.stringify({ name }),
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/api/departments');
+            document.location.replace('/api/departments/');
         } else {
             alert(response.statusText);
         }
@@ -21,5 +24,4 @@ const newDeptFormHandler = async (event) => {
     }
 }
 
-document.querySelector('.new-dept-form').addEventListener('submit', newDeptFormHandler);
-  
+document.querySelector('.edit-dept-form').addEventListener('submit', editDeptFormHandler);
