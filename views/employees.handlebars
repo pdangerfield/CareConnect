@@ -18,13 +18,13 @@
       <ul>
         <li class="dashboard_menu_item">
           <a href="/api/dashboard">
-              <img src="/assets/controls_icons/dashboard_icon_active.svg" alt="dashboard icon">
+              <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="dashboard icon">
               Dashboard 
           </a>
          </li>
          <li class="dashboard_menu_item">
           <a href="/api/employees">
-            <img src="/assets/controls_icons/Employee_Icon_Inactive.svg" alt="dashboard icon">
+            <img src="/assets/controls_icons/Employee_Icon_Active.svg" alt="dashboard icon">
             Employees
             </a>
         </li>
@@ -37,6 +37,7 @@
       </ul>
     </div>
   </container>
+
   {{!-- display --}}
   <container class="col-9" id="dashboard-display">
     {{!-- nav bar --}}
@@ -54,7 +55,14 @@
 
 <section class="card-container">
 {{#each employees as |employee|}}
-    <div class="card">
+    <div class="card mx-2">
+      {{> employee-details employee=employee}}
+    </div>
+  {{/each}}
+</section>
+<section class="card-container">
+{{#each employees as |employee|}}
+    <div class="card mx-2">
       {{> employee-details employee=employee}}
     </div>
   {{/each}}

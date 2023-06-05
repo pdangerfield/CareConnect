@@ -2,9 +2,13 @@
   --navy: #1E3163;
   --brown: #B6715B;
   --gray: #D9D9D9;
-  --cream: #F1D3BB;
+  --cream: #eeeeee;
   font-family: 'Prompt', sans-serif;
  }
+
+html, body {
+  height: 100%;
+}
 
  /* ----- text ------ */
 
@@ -24,36 +28,7 @@ h2 {
 
 /* dashboard controls */
 
-.dashboard_menu_item {
-  color: var(--cream);
-  font-size: 28px;
-  font-weight: medium;
-  margin-bottom: 20px;
-}
 
-#dashboard-controls a {
-  color: var(--cream);
-  text-decoration: none;
-  font-size: 32px;
-}
-
-#dashboard-controls a:hover {
-  color: var(--brown);
-  text-decoration: none;
-  font-size: 32px;
-}
-
-input {
-  border: 3px solid var(--navy);
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  font-size: 24px;
-  font-weight: lighter;
-  color: var(--navy);
-  background-color: var(--cream);
-}
 
 ::placeholder {
   color: var(--navy);
@@ -117,19 +92,63 @@ button {
 
 /* -dashboard controls */
 
+#vertical-logo{
+  margin-top: 20px;
+  height: 120px;
+}
+
 .dashboard-menu {
   margin-left: 100px;
+}
+
+.dashboard_menu_item {
+  color: var(--cream);
+  font-size: 28px;
+  font-weight: medium;
+  margin-bottom: 20px;
+  display: flex;
+  align-items:baseline;
 }
 
 #dashboard-controls {
   background-color: var(--navy);
   margin-bottom: 20px;
-  height: 100vh;
+  height: fill-available;
 }
+
+#dashboard-controls a {
+  color: var(--brown);
+  text-decoration: none;
+  font-size: 32px;
+}
+
+#dashboard-controls a:hover {
+  color: white;
+  font-size: 32px;
+}
+
+.dashboard_menu_item_active {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 32px;
+}
+
+input {
+  border: 3px solid var(--navy);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
 
 #dashboard-display {
   background-color: var(--cream);
-  height: 100vh;
+  height: fit-available;
 }
 
 #dashboard-controls ul {
@@ -140,8 +159,10 @@ button {
 .dashboard_menu_item img {
   position: relative;
   top: -2px;
+  width: 60px;
 }
 
+/* ----- dashboard display */
 .chart-container {
   padding: 20px;
 }
@@ -150,14 +171,9 @@ button {
   margin-top: 50px;
 }
 
-#vertical-logo{
-  margin-top: 20px;
-  height: 120px;
-}
-
 /* ----- departments ----- */
 .display-label {
-  margin-top: 90px;
+  margin-top: 70px;
   margin-left: 30px;
   margin-bottom: 20px;
 }
