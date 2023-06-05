@@ -5,7 +5,7 @@ const employee = require('./employee');
 
 department.hasMany(role,
     {
-       foreignKey: 'department_id'
+       foreignKey: 'department_id',
     }
 );
 role.hasMany(employee,
@@ -23,6 +23,7 @@ employee.belongsTo(role,
         foreignKey: 'role_id'
     }
 );
+
 
 
 module.exports = { User, department, role, employee }; 
