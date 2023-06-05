@@ -6,7 +6,7 @@
   font-family: 'Prompt', sans-serif;
  }
 
- /* ----- login/signup ------ */
+ /* ----- text ------ */
 
 h1{
   color: var(--navy);
@@ -74,7 +74,7 @@ button {
   width: 100%;
 }
 
-a {
+.link {
   color: var(--navy);
   font-size: 24px;
   font-weight: bold;
@@ -150,12 +150,61 @@ a {
   margin-top: 50px;
 }
 
-
 #vertical-logo{
   margin-top: 20px;
   height: 120px;
 }
 
+/* ----- departments ----- */
+.display-label {
+  margin-top: 90px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  height: 275px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card a {
+  color: var(--navy);
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 24px;
+  text-decoration: none;
+}
+
+.card header {
+  margin-top: 20px;
+}
 
 
 
