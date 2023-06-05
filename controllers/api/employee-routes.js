@@ -11,6 +11,20 @@ router.get("/", withAuth, async (req, res) => {
   res.render("employees", { employees });
 });
 
+// Get a single employee
+router.get("/:id", async (req, res) => {
+  try {
+    const employeeId = req.params.id;
+    const selectedEmployee = await employee.findByPk(employeeId);
+
+    // Handle the retrieved department data (e.g., send it as a response)
+    res.render("employees", { employees: [selectedEmployee] });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
+
 // Add an employee
 router.post("/", withAuth, async (req, res) => {
 
