@@ -19,7 +19,7 @@ router.get("/", withAuth, async (req, res) => {
 //Get all departments and render the "New-departments" view template
 router.get("/add", async (req, res) => {
   try {
-    res.render("New-department");
+    res.render("newDepartment");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -29,7 +29,7 @@ router.get("/add", async (req, res) => {
 //Get all departments and render the "Edit-departments" view template
 router.get("/edit", async (req, res) => {
   try {
-    res.render("New-department");
+    res.render("newDepartment");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");

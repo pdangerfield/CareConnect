@@ -62,13 +62,13 @@
       <a href="/api/departments/add"><button class="btn btn-primary">New Department</button></a>
     </div>
 
-    <section class="card-container">
-      {{#each departments as |department|}}
-      <div class="card mx-2">
-        {{> department-details}}
-      </div>
-      {{/each}}
-    </section>
+<section class="card-container">
+  {{#each departments as |department|}}
+    <div class="card mx-2">
+      {{> departmentDetails}}
+    </div>
+  {{/each}}
+</section>
   </container>
 </div>
 

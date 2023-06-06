@@ -4,7 +4,7 @@ const { role } = require("../../models");
 const router = require("express").Router();
 
 // Get all roles from the database and serialize them
-router.get("/roles", withAuth, async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const roleData = await role.findAll();
     const roles = roleData.map((role) => role.get({ plain: true }));
@@ -16,7 +16,7 @@ router.get("/roles", withAuth, async (req, res) => {
 });
 
 // Get a single role
-router.get("/roles/:id", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const roleId = req.params.id;
     const selectedRole = await role.findByPk(roleId);
@@ -29,9 +29,10 @@ router.get("/roles/:id", withAuth, async (req, res) => {
   }
 });
 
-router.post("/roles", withAuth, async (req, res) => {
+// Create a new role
+router.post("/", withAuth, async (req, res) => {
   try {
-    // Extract form data
+
     const { title, salary, department } = req.body;
 
     // Create a new role using Sequelize's create method
@@ -51,7 +52,7 @@ router.post("/roles", withAuth, async (req, res) => {
 });
 
 // Update a role
-router.put("/roles/:id", withAuth, async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     // Extract the role ID from the request parameters and the updated role data from the request body
     const roleId = req.params.id;
@@ -83,7 +84,7 @@ router.put("/roles/:id", withAuth, async (req, res) => {
 });
 
 // Delete a role
-router.delete("/roles/:id", withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     // Extract the role ID from the request parameters
     const roleId = req.params.id;

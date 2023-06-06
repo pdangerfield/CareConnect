@@ -61,13 +61,13 @@
       <a href="/api/employees/add"><button class="btn btn-primary">New Employee</button></a>
     </div>
 
-    <section class="card-container">
-      {{#each employees as |employee|}}
-      <div class="card mx-2">
-        {{> employee-details employee=employee}}
-      </div>
-      {{/each}}
-    </section>
+<section class="card-container">
+{{#each employees as |employee|}}
+    <div class="card mx-2">
+      {{> employeeDetails employee=employee}}
+    </div>
+  {{/each}}
+</section>
   </container>
 </div>
 
