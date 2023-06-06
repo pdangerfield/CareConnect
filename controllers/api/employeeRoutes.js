@@ -60,19 +60,19 @@ router.get("/:id", withAuth, async (req, res) => {
 });
 
 // Add an employee
-router.post("/", withAuth, async (req, res) => {
+router.post("/add", withAuth, async (req, res) => {
   try {
     // Extract form data
-    const { first_name, last_name, role_id, manager_id } = req.body;
+    const { first_name, last_name, title} = req.body;
 
     // Create a new employee using Sequelize's create method
     await employee.create({
-      first_name,
-      last_name,
-      role_id,
-      manager_id,
+      first_name: first_name,
+      last_name: last_name,
+      role_id: title
+      
     });
-    res.redirect("/employees");
+    res.redirect("/api/employees");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while adding a new employee.");
