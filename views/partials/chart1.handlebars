@@ -1,0 +1,75 @@
+
+<div>
+  <canvas id="employee-chart"></canvas>
+</div>
+<h2>Labor Cost</h2>
+<div>
+  <canvas id="labor-cost-chart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const processedData = JSON.parse('{{{processedData}}}');
+
+  const departmentsSet = new Set(processedData.map((employee) => employee.department_name));
+  const departments = Array.from(departmentsSet);
+
+  const employeeCount = departments.map((department) => {
+    return processedData.reduce((count, employee) => {
+      if (employee.department_name === department) {
+        return count + 1;
+      }
+      return count;
+    }, 0);
+  });
+
+    const laborCost = departments.map((department) => {
+    const employeesInDepartment = processedData.filter((employee) => employee.department_name === department);
+    const departmentSalaryTotal = employeesInDepartment.reduce((total, employee) => total + parseFloat(employee.salary), 0);
+    return departmentSalaryTotal;
+  });
+
+  const ctx = document.getElementById('employee-chart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: departments,
+      datasets: [{
+        label: '# of Employees',
+        data: employeeCount,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+    const cty = document.getElementById('labor-cost-chart');
+
+  new Chart(cty, {
+    type: 'line',
+    data: {
+      labels: departments,
+      datasets: [{
+        label: 'Labor Cost',
+        data: laborCost,
+        borderWidth: 1,
+        fill: false
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>

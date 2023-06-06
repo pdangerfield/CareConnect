@@ -37,12 +37,12 @@
     },
     {
         "first_name": "Ann",
-        "last_name": "wilson",
+        "last_name": "Wilson",
         "role_id": 7,
         "manager_id": null
     },
     {
-        "first_name": "Simon",
+        "first_name": "Simone",
         "last_name": "Tarses",
         "role_id": 8,
         "manager_id": null
@@ -54,16 +54,21 @@
         "manager_id": null
     },
     {
-        "first_name": "John",
+        "first_name": "Jonna",
         "last_name": "Abraham",
         "role_id": 10,
         "manager_id": null
     },
     {
-        "first_name": "Clark",
+        "first_name": "Clara",
         "last_name": "Smith",
         "role_id": 11,
         "manager_id": null
+    },
+    {
+        "first_name": "Gemma",
+        "last_name": "Smith",
+        "role_id": 12,
+        "manager_id": null
     }
-
 ]

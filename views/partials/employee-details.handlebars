@@ -1,6 +1,7 @@
-<!-- The contents of this card links to the department page using the department ID -->
-<a href="/api/employees/{{id}}">
-  <!-- The card contains the department name as the card header -->
-  <header> {{employee.first_name}} {{employee.last_name}}</header>
-  <img src="/assets/employee_images/{{id}}.png" alt=" {{employee.first_name}} {{employee.last_name}}">
+<!-- The contents of this card link to the department page using the department ID -->
+<a href="/api/employees/{{employee.id}}">
+  <!-- The card contains the employee image -->
+  <img src="/assets/employee_images/{{employee.id}}.png" alt="{{employee.first_name}} {{employee.last_name}}">
+  <header class="card-title">{{employee.first_name}} {{employee.last_name}}</header>
+  {{!-- <p>{{employee.role_id}}</p> --}}
 </a>

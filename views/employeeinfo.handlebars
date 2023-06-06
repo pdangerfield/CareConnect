@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
 
-<div class="row window d-flex">
+<div class="row d-flex">
   {{!-- controls --}}
   <container class="col-3" id="dashboard-controls">
     <div class="row">
@@ -18,13 +18,13 @@
       <ul>
         <li class="dashboard_menu_item">
           <a href="/api/dashboard">
-              <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="dashboard icon">
+              <img src="/assets/controls_icons/dashboard_icon_active.svg" alt="dashboard icon">
               Dashboard 
           </a>
          </li>
          <li class="dashboard_menu_item">
           <a href="/api/employees">
-            <img src="/assets/controls_icons/Employee_Icon_Active.svg" alt="dashboard icon">
+            <img src="/assets/controls_icons/Employee_Icon_Inactive.svg" alt="dashboard icon">
             Employees
             </a>
         </li>
@@ -37,7 +37,6 @@
       </ul>
     </div>
   </container>
-
   {{!-- display --}}
   <container class="col-9" id="dashboard-display">
     {{!-- nav bar --}}
@@ -55,19 +54,14 @@
 
 <section class="card-container">
 {{#each employees as |employee|}}
-    <div class="card mx-2">
-      {{> employee-details employee=employee}}
+    <div class="card">
+       <img src="/assets/employee_images/{{employee.id}}.png" alt="{{employee.first_name}} {{employee.last_name}}">
+  <header class="card-title">{{employee.first_name}} {{employee.last_name}}</header>
+  <p>{{employee.role_id}}</p>
     </div>
   {{/each}}
+  
 </section>
-<section class="card-container">
-{{#each employees as |employee|}}
-    <div class="card mx-2">
-      {{> employee-details employee=employee}}
-    </div>
-  {{/each}}
-</section>
-
   </container>
 </div>
 

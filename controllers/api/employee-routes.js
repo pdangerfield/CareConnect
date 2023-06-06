@@ -3,13 +3,32 @@ const { employee } = require("../../models");
 const router = require("express").Router();
 
 // Get all employees from the database and serialize them
-router.get("/", withAuth, async (req, res) => {
-  const employeeData = await employee.findAll();
-  const employees = employeeData.map((employee) =>
-    employee.get({ plain: true })
-  );
-  res.render("employees", { employees });
+router.get("/", async (req, res) => {
+  try {
+    const employeeData = await employee.findAll();
+    const employees = employeeData.map((employee) =>
+      employee.get({ plain: true })
+    );
+    res.render("employees", { employees });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving employees.");
+  }
 });
+
+// // Get a single employee
+// router.get("/:id", async (req, res) => {
+//   try {
+//     const employeeId = req.params.id;
+//     const selectedEmployee = await employee.findByPk(employeeId);
+
+//     // Handle the retrieved employee data (e.g., send it as a response)
+//     res.render("employees", { selectedEmployee });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send("An error occurred while retrieving the employee.");
+//   }
+// });
 
 // Get a single employee
 router.get("/:id", async (req, res) => {
@@ -18,7 +37,7 @@ router.get("/:id", async (req, res) => {
     const selectedEmployee = await employee.findByPk(employeeId);
 
     // Handle the retrieved department data (e.g., send it as a response)
-    res.render("employees", { employees: [selectedEmployee] });
+    res.render("employeeinfo", { employees: [selectedEmployee] });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -27,7 +46,6 @@ router.get("/:id", async (req, res) => {
 
 // Add an employee
 router.post("/", withAuth, async (req, res) => {
-
   try {
     // Extract form data
     const { first_name, last_name, role_id, manager_id } = req.body;
@@ -78,7 +96,6 @@ router.put("/employees/:id", async (req, res) => {
 
 // Delete an employee
 router.delete("/employees/:id", async (req, res) => {
-
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
 
