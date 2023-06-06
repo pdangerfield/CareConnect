@@ -70,5 +70,77 @@
         "last_name": "Smith",
         "role_id": 12,
         "manager_id": null
+    },
+    {
+        "first_name": "John",
+        "last_name": "Doe",
+        "role_id": 13,
+        "manager_id": null
+    },
+    {
+        "first_name": "Tom",
+        "last_name": "Allen",
+        "role_id": 14,
+        "manager_id": null
+    },
+    {
+        "first_name": "Kira",
+        "last_name": "Nerys",
+        "role_id": 15,
+        "manager_id": null
+    },
+    {
+        "first_name": "Ray",
+        "last_name": "Charles",
+        "role_id": 16,
+        "manager_id": null
+    },
+    {
+        "first_name": "Roger",
+        "last_name": "Walter",
+        "role_id": 17,
+        "manager_id": null
+    },
+    {
+        "first_name": "Robert",
+        "last_name": "Plant",
+        "role_id": 18,
+        "manager_id": null
+    },
+    {
+        "first_name": "Ann",
+        "last_name": "Wilson",
+        "role_id": 19,
+        "manager_id": null
+    },
+    {
+        "first_name": "Simone",
+        "last_name": "Tarses",
+        "role_id": 20,
+        "manager_id": null
+    },
+    {
+        "first_name": "Louis",
+        "last_name": "Philip",
+        "role_id": 21,
+        "manager_id": null
+    },
+    {
+        "first_name": "Jonna",
+        "last_name": "Abraham",
+        "role_id": 22,
+        "manager_id": null
+    },
+    {
+        "first_name": "Clara",
+        "last_name": "Smith",
+        "role_id": 23,
+        "manager_id": null
+    },
+    {
+        "first_name": "Gemma",
+        "last_name": "Smith",
+        "role_id": 24,
+        "manager_id": null
     }
 ]

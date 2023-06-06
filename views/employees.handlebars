@@ -18,20 +18,26 @@
       <ul>
         <li class="dashboard_menu_item">
           <a href="/dashboard">
-              <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="dashboard icon">
-              Dashboard 
+            <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="dashboard icon">
+            Dashboard
           </a>
-         </li>
-         <li class="dashboard_menu_item">
+        </li>
+        <li class="dashboard_menu_item">
           <a href="/api/employees">
             <img src="/assets/controls_icons/Employee_Icon_Active.svg" alt="dashboard icon">
             Employees
-            </a>
+          </a>
         </li>
         <li class="dashboard_menu_item">
           <a href="/api/departments">
             <img src="/assets/controls_icons/Departments_Icon_Inactive.svg" alt="dashboard icon">
             Departments
+          </a>
+        </li>
+        <li class="dashboard_menu_item">
+          <a href="/api/roles">
+            <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
+            Roles
           </a>
         </li>
       </ul>
@@ -46,13 +52,13 @@
         <input type="text" placeholder="name, role, or department" id="search-bar" name="search-bar">
       </div>
       <div class="col-2 acct-controls">
-       <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
+        <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
         <img src="/assets/controls_icons/profile_icon.svg" alt="profile icon">
       </div>
     </nav>
     <h1 class="display-label">Employees</h1>
-<div>
-      <button class="btn btn-primary">New Employee</button>
+    <div>
+      <a href="/api/employees/add"><button class="btn btn-primary">New Employee</button></a>
     </div>
 
 <section class="card-container">

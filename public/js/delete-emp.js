@@ -5,7 +5,7 @@ const deleteEmpFormHandler = async (event) => {
         window.location.toString().split('/').length -1
     ];
   
-    const response = await fetch(`/api/employees/${id}`, {
+    const response = await fetch(`/api/employees/edit${id}`, {
             method: 'DELETE',
             body: JSON.stringify({ id }),
             headers: { 'Content-Type': 'application/json' }
@@ -19,4 +19,4 @@ const deleteEmpFormHandler = async (event) => {
         }
 }
 
-document.querySelector('.delete-emp-btn').addEventListener('submit', deleteEmpFormHandler);
+document.querySelector('#emp-del-btn').addEventListener('click', deleteEmpFormHandler);
