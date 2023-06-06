@@ -88,7 +88,7 @@ button:hover {
 
 /* - nav - */
 .nav-bar {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -113,7 +113,8 @@ button:hover {
 /* -dashboard controls */
 
 #vertical-logo{
-  margin-top: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
   height: 120px;
 }
 
@@ -190,9 +191,14 @@ input {
   margin-top: 50px;
 }
 
+#chart-label {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 /* ----- departments ----- */
 .display-label {
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 30px;
   margin-bottom: 20px;
 }
@@ -268,6 +274,12 @@ input {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-left: 30px;
 }
+
+
+.add-dept-card-container {
+  width: calc(90%);
+
+
   
 #title {
   margin: 0px 0 20px 0;
@@ -287,9 +299,46 @@ select {
 }
 
 #back-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+#back-button {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin-left: 0px;
+  background-color: var(--cream);
+  /* border: 2px solid var(--navy); */
+  color: var(--navy);
+=======
+
+select {
+  border: 3px solid var(--navy);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
+#back-icon {
   margin-left: 40px;
   height: 40px;
   width: 40px;
   display: flex;
+
 }
 
+#back-button:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#active-label {
+  color: var(--cream);
+}
