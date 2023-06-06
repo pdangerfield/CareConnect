@@ -39,7 +39,7 @@
   {{!-- display --}}
   <container class="col-9" id="dashboard-display">
     {{!-- nav bar --}}
-    <nav class="row my-4 nav-bar">
+    <nav class="row nav-bar">
       <div class="col-10">
       </div>
       <div class="col-2 acct-controls">
@@ -47,9 +47,9 @@
       </div>
     </nav>
     {{!-- charts --}}
+    <h1 id="chart-label">Employees per department</h1>
     <div class="chart-container row mx-3 my-6">
       <div>
-        <h2 class="chart-label">Employees per department</h2>
         <div id="employee-chart-container">
           {{> chart}}
         </div> 
