@@ -3,7 +3,7 @@ const { employee } = require("../../models");
 const router = require("express").Router();
 
 // Get all employees from the database and serialize them
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const employeeData = await employee.findAll();
     const employees = employeeData.map((employee) =>
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 });
 
 // Get a single employee
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const employeeId = req.params.id;
     const selectedEmployee = await employee.findByPk(employeeId);
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Get a single employee
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const employeeId = req.params.id;
     const selectedEmployee = await employee.findByPk(employeeId);
@@ -65,7 +65,7 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // Update an employee
-router.put("/employees/:id", async (req, res) => {
+router.put("/employees/:id", withAuth, async (req, res) => {
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
     const { first_name, last_name, role_id, manager_id } = req.body; // Extract updated employee data from the request body
@@ -95,7 +95,7 @@ router.put("/employees/:id", async (req, res) => {
 });
 
 // Delete an employee
-router.delete("/employees/:id", async (req, res) => {
+router.delete("/employees/:id", withAuth, async (req, res) => {
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
 
