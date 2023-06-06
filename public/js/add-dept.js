@@ -12,6 +12,7 @@ const newDeptFormHandler = async (event) => {
         });
         if (response.ok) {
             document.location.replace('/api/departments');
+            window.alert("Department Added!");
         } else {
             alert(response.statusText);
         }

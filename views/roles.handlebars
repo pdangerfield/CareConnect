@@ -1,64 +1,56 @@
-<div class="row d-flex">
+
+{{> CSS}}
+
+
+<div class="row window d-flex">
   {{!-- controls --}}
   <container class="col-3" id="dashboard-controls">
     <div class="row">
       <img src="/assets/logos/vertical_logo.svg" alt="logo" class="logo" id="vertical-logo">
     </div>
-    <div class="row justify-content-center mx-3">
+    <div class="row dashboard-menu">
       <ul>
         <li class="dashboard_menu_item">
-          <img src="/assets/controls_icons/dashboard_icon_active.svg" alt="dashboard icon">
-          Dashboard</li>
-        <li class="dashboard_menu_item">
-          <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
-          Employees
+          <a href="/dashboard">
+              <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="controls icon">
+              Dashboard 
+          </a>
+         </li>
+         <li class="dashboard_menu_item">
+          <a href="/api/employees">
+            <img src="/assets/controls_icons/Employee_Icon_Inactive.svg" alt="employees icon">
+            Employees
+            </a>
         </li>
         <li class="dashboard_menu_item">
-          <a href="/department">
-            <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
+          <a href="/api/departments">
+            <img src="/assets/controls_icons/Departments_Icon_Inactive.svg" alt="departments icon">
             Departments
           </a>
         </li>
         <li class="dashboard_menu_item">
-          <a href="/api/roles">
-            <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
-            Roles
+          <a  href="/api/roles">
+            <img src="/assets/controls_icons/Roles_Icon_Active.svg" alt="roles icon">
+            <span id="active-label">Roles</span>
           </a>
         </li>
       </ul>
     </div>
   </container>
+  
   {{!-- display --}}
   <container class="col-9" id="dashboard-display">
     {{!-- nav bar --}}
-    <nav class="row mx-3 my-3">
-      <div class="col-9">
-        <input type="text" placeholder="name, role, or department" id="search-bar" name="search-bar">
+    <nav class="row nav-bar">
+      <div class="col-10">
+        
       </div>
-      <div class="col-2">
-        <img src="/assets/controls_icons/logout_icon.svg" alt="search icon">
-        <img src="/assets/controls_icons/profile_icon.svg" alt="search icon">
+      <div class="col-2 acct-controls">
+        <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
       </div>
     </nav>
-    <h1>Roles</h1>
-<style>
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    <h1 class="display-label">Roles</h1>
 
-  .card {
-     width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    /* Add additional styling for the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-</style>
 
 <section class="card-container">
   {{#each roles as |role|}}
@@ -70,4 +62,5 @@
  </container>
 </div>
 
-<script src="/js/roles.js"></script>
+<script src="/js/logout.js"></script>
+

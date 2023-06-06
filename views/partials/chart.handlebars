@@ -2,7 +2,9 @@
 <div>
   <canvas id="employee-chart"></canvas>
 </div>
-<h2>Labor Cost</h2>
+
+<h1 class="display-label">Labor Cost</h1>
+
 <div>
   <canvas id="labor-cost-chart"></canvas>
 </div>
@@ -10,6 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+  
   const processedData = JSON.parse('{{{processedData}}}');
 
   const departmentsSet = new Set(processedData.map((employee) => employee.department_name));

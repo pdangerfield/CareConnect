@@ -18,6 +18,7 @@ const newEmpFormHandler = async (event) => {
         });
         if (response.ok) {
             document.location.replace('/api/employees');
+            window.alert("Department Added!");
         } else {
             alert(response.statusText);
         }

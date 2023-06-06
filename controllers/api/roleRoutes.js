@@ -1,5 +1,5 @@
 const withAuth = require("../../utils/auth");
-const { role } = require("../../models");
+const { role, department } = require("../../models");
 
 const router = require("express").Router();
 
