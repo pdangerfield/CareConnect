@@ -275,9 +275,11 @@ input {
     margin-left: 30px;
 }
 
+
 .add-dept-card-container {
   width: calc(90%);
-}
+
+
   
 #title {
   margin: 0px 0 20px 0;
@@ -310,6 +312,26 @@ select {
   background-color: var(--cream);
   /* border: 2px solid var(--navy); */
   color: var(--navy);
+=======
+
+select {
+  border: 3px solid var(--navy);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
+#back-icon {
+  margin-left: 40px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+
 }
 
 #back-button:hover {
