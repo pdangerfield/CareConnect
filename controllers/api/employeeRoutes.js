@@ -1,5 +1,5 @@
 const withAuth = require("../../utils/auth");
-const { employee, role } = require("../../models");
+const { department, employee, role } = require("../../models");
 
 const router = require("express").Router();
 
@@ -32,13 +32,17 @@ router.get("/add", async (req, res) => {
 });
 
 // Get all employees from the database and serialize them for "Edit Employee" view template
-router.get("/edit", async (req, res) => {
+router.get("/edit/:id", async (req, res) => {
   try {
+      const employeeId = req.params.id;
+      
+      const employeeToEdit = await employee.findByPk(employeeId);
+      
       const roleData = await role.findAll();
       const roles = roleData.map((role) =>
       role.get({ plain: true })
     );
-    res.render("newEmployee", { roles});
+    res.render("editEmployee", { employeeToEdit, roles });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -52,7 +56,7 @@ router.get("/:id", withAuth, async (req, res) => {
     const selectedEmployee = await employee.findByPk(employeeId);
 
     // Handle the retrieved department data (e.g., send it as a response)
-    res.render("employeeInfo", { employees: [selectedEmployee] });
+    res.render("employeeInfo", { employee: selectedEmployee });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -80,10 +84,10 @@ router.post("/add", withAuth, async (req, res) => {
 });
 
 // Update an employee
-router.put("/employees/:id", withAuth, async (req, res) => {
+router.put("/edit/:id", withAuth, async (req, res) => {
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
-    const { first_name, last_name, role_id, manager_id } = req.body; // Extract updated employee data from the request body
+    const { first_name, last_name, title } = req.body; // Extract updated employee data from the request body
 
     // Find the employee by ID
     const employeeRecord = await employee.findByPk(id);
@@ -96,13 +100,13 @@ router.put("/employees/:id", withAuth, async (req, res) => {
     // Update the employee's properties
     employeeRecord.first_name = first_name;
     employeeRecord.last_name = last_name;
-    employeeRecord.role_id = role_id;
-    employeeRecord.manager_id = manager_id;
+    employeeRecord.role_id = title;
+    //employeeRecord.manager_id = manager_id;
 
     // Save the updated employee to the database
     await employeeRecord.save();
 
-    res.redirect("/employees");
+    res.redirect(303, "/api/employees");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while updating the employee.");
@@ -110,7 +114,7 @@ router.put("/employees/:id", withAuth, async (req, res) => {
 });
 
 // Delete an employee
-router.delete("/employees/:id", withAuth, async (req, res) => {
+router.delete("/del/:id", withAuth, async (req, res) => {
   try {
     const { id } = req.params; // Extract the employee ID from the request parameters
 
@@ -126,7 +130,7 @@ router.delete("/employees/:id", withAuth, async (req, res) => {
     await employeeRecord.destroy();
 
     // Redirect to employees page or send a success response
-    res.redirect("/employees");
+    res.redirect(303, "/api/employees");
   } catch (error) {
     // Handle any errors that occur during the process
     console.error(error);

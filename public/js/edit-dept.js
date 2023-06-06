@@ -14,7 +14,7 @@ const editDeptFormHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/api/departments/');
+            document.location.replace('/api/departments');
         } else {
             alert(response.statusText);
         }
