@@ -24,7 +24,7 @@ router.get("/add", async (req, res) => {
       const roles = roleData.map((role) =>
       role.get({ plain: true })
     );
-    res.render("New-employee", { roles});
+    res.render("newEmployee", { roles});
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -38,7 +38,7 @@ router.get("/edit", async (req, res) => {
       const roles = roleData.map((role) =>
       role.get({ plain: true })
     );
-    res.render("New-employee", { roles});
+    res.render("newEmployee", { roles});
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -52,7 +52,7 @@ router.get("/:id", withAuth, async (req, res) => {
     const selectedEmployee = await employee.findByPk(employeeId);
 
     // Handle the retrieved department data (e.g., send it as a response)
-    res.render("employeeinfo", { employees: [selectedEmployee] });
+    res.render("employeeInfo", { employees: [selectedEmployee] });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");

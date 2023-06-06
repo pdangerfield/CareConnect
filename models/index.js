@@ -1,4 +1,4 @@
-const User = require('./User');
+const user = require('./user');
 const department = require('./department');
 const role = require('./role');
 const employee = require('./employee');
@@ -26,4 +26,4 @@ employee.belongsTo(role,
 
 
 
-module.exports = { User, department, role, employee }; 
+module.exports = { user, department, role, employee }; 
