@@ -278,6 +278,45 @@ input {
 
 .add-dept-card-container {
   width: calc(90%);
+}
+  
+#title {
+  margin: 0px 0 20px 0;
+  font-size: 24px;
+}
+
+select {
+  border: 3px solid var(--navy);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
+#back-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+#back-button {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin-left: 0px;
+  background-color: var(--cream);
+  /* border: 2px solid var(--navy); */
+  color: var(--navy);
+}
+
+=======
+
+.add-dept-card-container {
+  width: calc(90%);
 
 
   
@@ -312,27 +351,6 @@ select {
   background-color: var(--cream);
   /* border: 2px solid var(--navy); */
   color: var(--navy);
-=======
-
-select {
-  border: 3px solid var(--navy);
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  font-size: 24px;
-  font-weight: lighter;
-  color: var(--navy);
-  background-color: var(--cream);
-}
-
-#back-icon {
-  margin-left: 40px;
-  height: 40px;
-  width: 40px;
-  display: flex;
-
-}
 
 #back-button:hover {
   box-shadow: none;
