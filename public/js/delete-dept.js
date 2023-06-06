@@ -5,7 +5,7 @@ const deleteDeptFormHandler = async (event) => {
         window.location.toString().split('/').length -1
     ];
   
-    const response = await fetch(`/api/departments/${id}`, {
+    const response = await fetch(`/api/departments/edit/${id}`, {
             method: 'DELETE',
             body: JSON.stringify({ id }),
             headers: { 'Content-Type': 'application/json' }
@@ -19,4 +19,4 @@ const deleteDeptFormHandler = async (event) => {
         }
 }
 
-document.querySelector('.delete-dept-btn').addEventListener('submit', deleteDeptFormHandler);
+document.querySelector('#dept-del-btn').addEventListener('click', deleteDeptFormHandler);
