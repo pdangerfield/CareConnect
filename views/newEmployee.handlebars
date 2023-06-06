@@ -1,4 +1,39 @@
-{{> dashboardControls }}
+{{> CSS }}
+<div class="row window d-flex">
+  {{!-- controls --}}
+  <container class="col-3" id="dashboard-controls">
+    <div class="row">
+      <img src="/assets/logos/vertical_logo.svg" alt="logo" class="logo" id="vertical-logo">
+    </div>
+    <div class="row dashboard-menu">
+      <ul>
+        <li class="dashboard_menu_item">
+          <a href="/dashboard">
+              <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="controls icon">
+              Dashboard 
+          </a>
+         </li>
+         <li class="dashboard_menu_item">
+          <a href="/api/employees">
+            <img src="/assets/controls_icons/Employee_Icon_Active.svg" alt="employees icon">
+            <span id="active-label">Employees</span>
+            </a>
+        </li>
+        <li class="dashboard_menu_item">
+          <a href="/api/departments">
+            <img src="/assets/controls_icons/Departments_Icon_Inactive.svg" alt="departments icon">
+            Departments
+          </a>
+        </li>
+        <li class="dashboard_menu_item">
+          <a  href="/api/roles">
+            <img src="/assets/controls_icons/roles_icon.svg" alt="roles icon">
+            <span>Roles</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </container>
     {{!-- display --}}
 <container class="col-9" id="dashboard-display">
     {{!-- nav bar --}}
@@ -34,11 +69,11 @@
         </div>
         </form>
     </section>
-        <button class="button" href="/api/employees"><img src="/assets/controls_icons/back-arrow.svg" alt="back" id="back-icon">Go back</button>
+        <button class="button" id="back-button" href="api/employees"><img src="/assets/controls_icons/back-arrow.svg" alt="back" id="back-icon">Go back</button>
 
 </container>
 
 
 <script type="text/javascript" src="/js/add-emp.js"></script>
-<script type="text/javascript" src="/js/edit-emp.js"></script>
-<script type="text/javascript" src="/js/delete-emp.js"></script>
+{{!-- <script type="text/javascript" src="/js/edit-emp.js"></script>
+<script type="text/javascript" src="/js/delete-emp.js"></script> --}}

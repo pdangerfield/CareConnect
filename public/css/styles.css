@@ -113,7 +113,8 @@ button:hover {
 /* -dashboard controls */
 
 #vertical-logo{
-  margin-top: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
   height: 120px;
 }
 
@@ -268,6 +269,10 @@ input {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-left: 30px;
 }
+
+.add-dept-card-container {
+  width: calc(90%);
+}
   
 #title {
   margin: 0px 0 20px 0;
@@ -287,9 +292,26 @@ select {
 }
 
 #back-icon {
-  margin-left: 40px;
   height: 40px;
   width: 40px;
-  display: flex;
+  margin-right: 10px;
 }
 
+#back-button {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin-left: 0px;
+  background-color: var(--cream);
+  /* border: 2px solid var(--navy); */
+  color: var(--navy);
+}
+
+#back-button:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#active-label {
+  color: var(--cream);
+}
