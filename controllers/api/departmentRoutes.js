@@ -27,9 +27,11 @@ router.get("/add", async (req, res) => {
 });
 
 //Get all departments and render the "Edit-departments" view template
-router.get("/edit", async (req, res) => {
+router.get("/edit/:id", async (req, res) => {
   try {
-    res.render("newDepartment");
+    const departmentId = req.params.id;
+    const departmentToEdit = await department.findByPk(departmentId);
+    res.render("editDepartment",{departmentToEdit});
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -43,7 +45,7 @@ router.get("/:id", withAuth, async (req, res) => {
     const selectedDepartment = await department.findByPk(departmentId);
 
     // Handle the retrieved department data (e.g., send it as a response)
-    res.render("departments", { departments: [selectedDepartment] });
+    res.render("departmentInfo", { departments: [selectedDepartment] });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -67,10 +69,10 @@ router.post("/add", withAuth, async (req, res) => {
 });
 
 // Update a department
-router.put("/:id", withAuth, async (req, res) => {
+router.put("/edit/:id", withAuth, async (req, res) => {
   try {
     const departmentId = req.params.id;
-    const { name } = req.body;
+    const { deptName } = req.body;
 
     const updatedDepartment = await department.findByPk(departmentId);
 
@@ -78,10 +80,10 @@ router.put("/:id", withAuth, async (req, res) => {
       return res.status(404).send("Department not found");
     }
 
-    updatedDepartment.name = name;
+    updatedDepartment.department_name = deptName;
     await updatedDepartment.save();
 
-    res.redirect("/api/departments");
+    res.redirect(303,"/api/departments");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while updating the department.");
@@ -89,7 +91,7 @@ router.put("/:id", withAuth, async (req, res) => {
 });
 
 // Delete a department
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete("/del/:id", withAuth, async (req, res) => {
   try {
     const departmentId = req.params.id;
 
@@ -101,7 +103,7 @@ router.delete("/:id", withAuth, async (req, res) => {
 
     await deletedDepartment.destroy();
 
-    res.redirect("/api/departments");
+    res.redirect(303, "/api/departments");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while deleting the department.");

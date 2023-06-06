@@ -55,40 +55,23 @@
                 <img src="/assets/controls_icons/profile_icon.svg" alt="profile icon">
             </div>
         </nav>
-        
+        <h1 class="display-label">Department</h1>
 
-        <h1>Create New Department</h1>
-        <style>
-            .card-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            .card {
-                width: calc(33.33% - 20px);
-                margin-bottom: 20px;
-                /* Add additional styling for the card */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-        </style>
-
+{{#each departments as |department|}}
         <section class="card-container">
-            <form class="new-dept-form">
-                <div class="card">
-                    <div>
-                        <label for="dept-name"><b>Department-Name</b></label>
-                        <input class="input" type="text" id="dept-name" name="dept-name" />
-                    </div>
-                    <button  class="button  add-dept-btn" type="button" id="dept-add-btn">Add</button>
-                    
-                </div>
-            </form>
+            
+            <div class="card mx-2">
+                {{> departmentDetails}}
+            </div>
+            
         </section>
+        <a href="/api/departments/edit/{{department.id}}"><button class="btn btn-primary">Edit </button></a>
+        <button class="button delete-dept-btn" type="button" id="dept-del-btn"> Delete</button>
+        {{/each}}
+</div>
+</section>
+</container>
+</div>
 
-        <script src="/js/add-dept.js"></script>
-        
+<script src="/js/logout.js"></script>
+<script src="/js/delete-dept.js"></script>

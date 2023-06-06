@@ -8,7 +8,7 @@ const editDeptFormHandler = async (event) => {
     ];
 
     if (deptName) {
-        const response = await fetch(`/api/departments/${id}`, {
+        const response = await fetch(`/api/departments/edit/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ deptName }),
             headers: { 'Content-Type': 'application/json' }
@@ -24,4 +24,4 @@ const editDeptFormHandler = async (event) => {
     }
 }
 
-document.querySelector('#dept-edit-btn').addEventListener('submit', editDeptFormHandler);
+document.querySelector('#dept-edit-btn').addEventListener('click', editDeptFormHandler);
