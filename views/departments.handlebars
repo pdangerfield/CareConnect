@@ -52,15 +52,10 @@
       </div>
     </nav>
     <h1 class="display-label">Departments</h1>
-
-
-<section class="card-container">
-  {{#each departments as |department|}}
-    <div class="card mx-2">
-      {{> department-details}}
+<div>
+      <button class="btn btn-primary">New Department</button>
     </div>
-  {{/each}}
-</section>
+
 <section class="card-container">
   {{#each departments as |department|}}
     <div class="card mx-2">
