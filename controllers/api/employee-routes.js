@@ -24,7 +24,7 @@ router.get("/add", async (req, res) => {
       const roles = roleData.map((role) =>
       role.get({ plain: true })
     );
-    res.render("New-employee", { roles});
+    res.render("New-employee", { roles });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
@@ -49,7 +49,9 @@ router.get("/edit", async (req, res) => {
 router.get("/:id", withAuth, async (req, res) => {
   try {
     const employeeId = req.params.id;
-    const selectedEmployee = await employee.findByPk(employeeId);
+    const selectedEmployee = await employee.findByPk(employeeId, {
+      include: [{ model: role, include: [department] }]
+    });
 
     // Handle the retrieved department data (e.g., send it as a response)
     res.render("employeeinfo", { employees: [selectedEmployee] });
@@ -60,19 +62,19 @@ router.get("/:id", withAuth, async (req, res) => {
 });
 
 // Add an employee
-router.post("/", withAuth, async (req, res) => {
+router.post("/add", withAuth, async (req, res) => {
+
   try {
     // Extract form data
-    const { first_name, last_name, role_id, manager_id } = req.body;
+    const { first_name, last_name, title } = req.body;
 
     // Create a new employee using Sequelize's create method
     await employee.create({
-      first_name,
-      last_name,
-      role_id,
-      manager_id,
+      first_name: first_name,
+      last_name: last_name,
+      role_id: title
     });
-    res.redirect("/employees");
+    res.redirect("/api/employees");
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while adding a new employee.");

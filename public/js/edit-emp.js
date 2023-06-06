@@ -10,7 +10,7 @@ const editEmpFormHandler = async (event) => {
     ];
 
     if (first_name && last_name && title) {
-        const response = await fetch(`/api/employees/${id}`, {
+        const response = await fetch(`/api/employees/edit/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ first_name, last_name, title }),
             headers: { 'Content-Type': 'application/json' }
@@ -26,4 +26,4 @@ const editEmpFormHandler = async (event) => {
     }
 }
 
-document.querySelector('.edit-employee-form').addEventListener('submit', editEmpFormHandler);
+document.querySelector('#emp-edit-btn').addEventListener('submit', editEmpFormHandler);

@@ -51,11 +51,13 @@ router.get("/:id", withAuth, async (req, res) => {
 });
 
 // Add a department
-router.post("/", withAuth, async (req, res) => {
+router.post("/add", withAuth, async (req, res) => {
   try {
-    const { name } = req.body;
-
-    await department.create({ name });
+    //Extract from data
+    const { deptName } = req.body;
+    // create a new department
+    await department.create({ 
+      department_name: deptName });
 
     res.redirect("/api/departments");
   } catch (error) {
