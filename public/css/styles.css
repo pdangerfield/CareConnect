@@ -248,12 +248,14 @@ input {
   text-decoration: none;
 }
 
-.card header {
-  margin-top: 20px;
-}
 
 /* Add Dept/Employee */
-
+.view-details-card {
+  padding: 20px;
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 24px;
+}
 .add-card-container {
   display: flex;
   flex-wrap: wrap;

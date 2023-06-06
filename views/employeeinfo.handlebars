@@ -45,15 +45,14 @@
        <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
       </div>
     </nav>
-    <h1 class="display-label">Employees</h1>
+    <h1 class="display-label">Employee Details</h1>
 
 
 <section class="card-container">
 {{#each employees as |employee|}}
-    <div class="card">
-       <img src="/assets/employee_images/{{employee.id}}.png" alt="{{employee.first_name}} {{employee.last_name}}">
+    <div class="view-details-card card">
+       <img class="view-details-card" src="/assets/employee_images/{{employee.id}}.png" alt="{{employee.first_name}} {{employee.last_name}}">
   <header class="card-title">{{employee.first_name}} {{employee.last_name}}</header>
-  <p>{{employee.role_id}}</p>
     </div>
   {{/each}}
   
