@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
         };
       });
 
-      res.render('homepage', { processedData: JSON.stringify(processedData) });
+      res.render('dashboard', { processedData: JSON.stringify(processedData) });
     })
     .catch((error) => {
       console.error('Error:', error);
