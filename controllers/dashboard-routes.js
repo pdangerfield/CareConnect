@@ -3,7 +3,7 @@ const employee = require("../models/employee");
 const role = require("../models/role");
 const department = require("../models/department");
 
-router.get('/dashboard', (req, res) => {
+router.get('/', (req, res) => {
   employee.findAll({
     include: [{ model: role, include: [department] }]
   })
