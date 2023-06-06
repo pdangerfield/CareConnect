@@ -4,7 +4,7 @@ const role = require("../models/role");
 const department = require("../models/department");
 const withAuth = require("../utils/auth");
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   employee.findAll({
     include: [{ model: role, include: [department] }]
   })
