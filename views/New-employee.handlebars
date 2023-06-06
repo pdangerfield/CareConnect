@@ -30,14 +30,15 @@
             <label for="last_name"><b>Employee Last_name: </b></label>
             <input class="input" type="text" id="last_name" name="last_name" />
         </div>
-        <div>
-            {{#each roles as |role|}}
-            <label for="title"><b>Choose a Role </b></label>
-            <select id="title" name="title" placeholder="role-title">
-                <option value="{{role.title}}">{{role.title}}</option>
-            </select>
-            {{/each}}
-        </div>
+<div>
+  <label for="title"><b>Choose a Role</b></label>
+  <select id="title" name="title" placeholder="role-title">
+    {{#each roles as |role|}}
+      <option value="{{role.title}}">{{role.title}}</option>
+    {{/each}}
+  </select>
+</div>
+
         <button type="submit" class="button is primary">ADD</button>
         <button class="button" type="submit"> Update </button>
         <button class="button delete-dept-btn" type="submit"> Delete</button>
