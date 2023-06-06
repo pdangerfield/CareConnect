@@ -1,8 +1,9 @@
 const editEmpFormHandler = async (event) => {
+    console.log("INSIDE editEmpFormHandler");
     event.preventDefault();
 
-    const first_name = document.querySelector('input[name="first_name"]').value.trim();
-    const last_name = document.querySelector('input[name="last_name"]').value.trim();
+    const first_name = document.querySelector('input[name="first_name"]').value;
+    const last_name = document.querySelector('input[name="last_name"]').value;
     const title = document.querySelector('select[name="title"]').value.trim();
     
     const id = window.location.toString().split('/')[
@@ -16,7 +17,7 @@ const editEmpFormHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/api/employees/');
+            document.location.replace('/api/employees');
         } else {
             alert(response.statusText);
         }
@@ -26,4 +27,4 @@ const editEmpFormHandler = async (event) => {
     }
 }
 
-document.querySelector('#emp-edit-btn').addEventListener('submit', editEmpFormHandler);
+document.querySelector('#emp-edit-btn').addEventListener('click', editEmpFormHandler);

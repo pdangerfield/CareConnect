@@ -38,20 +38,20 @@
 
 <h1>Edit Department</h1>
 
-<section class="card-container">
-    <form class="new-dept-form">
-        <div class="card">
-            <div>
-                <label for="dept-name"><b>Department-Name</b></label>
-                <input class="input" type="text" id="dept-name" name="dept-name" />
-            </div>
+        <section class="card-container">
+            <form class="edit-dept-form">
+                <div class="card">
+                    <div>
+                        <label for="dept-name"><b>Department-Name</b></label>
+                        <input class="input" type="text" id="dept-name" name="dept-name" value="{{departmentToEdit.department_name}}"/>
+                    </div>
 
-            <button class="button" type="submit"> Edit </button>
-            <button class="button delete-dept-btn" type="submit"> Delete </button>
-        </div>
-    </form>
-</section>
+                    <button class="button edit-dept-btn" type="button" id="dept-edit-btn"> Edit </button>
+                </div>
+            </form>
+        </section>
+</container>
+</div>
 
-
-<script src="/javascript/edit-dept.js"></script>
-<script src="/javascript/delete-dept.js"></script>
+        <script src="/js/edit-dept.js"></script>
+        
