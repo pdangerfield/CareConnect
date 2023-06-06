@@ -1,67 +1,26 @@
-<head>
-  <title>CareConnect</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../../css/styles.css">
-</head>
-
-<div class="row window d-flex">
-  {{!-- controls --}}
-  <container class="col-3" id="dashboard-controls">
-    <div class="row">
-      <img src="/assets/logos/vertical_logo.svg" alt="logo" class="logo" id="vertical-logo">
-    </div>
-    <div class="row dashboard-menu">
-      <ul>
-        <li class="dashboard_menu_item">
-          <a href="/dashboard">
-            <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="dashboard icon">
-            Dashboard
-          </a>
-        </li>
-        <li class="dashboard_menu_item">
-          <a href="/api/employees">
-            <img src="/assets/controls_icons/Employee_Icon_Active.svg" alt="dashboard icon">
-            Employees
-          </a>
-        </li>
-        <li class="dashboard_menu_item">
-          <a href="/api/departments">
-            <img src="/assets/controls_icons/Departments_Icon_Inactive.svg" alt="dashboard icon">
-            Departments
-          </a>
-        </li>
-        <li class="dashboard_menu_item">
-          <a href="/api/roles">
-            <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
-            Roles
-          </a>
-        </li>
-      </ul>
-    </div>
-  </container>
+{{> dashboardControls}}
 
   {{!-- display --}}
   <container class="col-9" id="dashboard-display">
     {{!-- nav bar --}}
     <nav class="row my-4 nav-bar">
       <div class="col-10">
-        <input type="text" placeholder="name, role, or department" id="search-bar" name="search-bar">
+        
       </div>
       <div class="col-2 acct-controls">
         <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
-        <img src="/assets/controls_icons/profile_icon.svg" alt="profile icon">
       </div>
     </nav>
     <h1 class="display-label">Employees</h1>
-    <div>
-      <a href="/api/employees/add"><button class="btn btn-primary">New Employee</button></a>
-    </div>
+
 
 <section class="card-container">
+  <div class="card mx-2">
+    <a href="/api/employees/add">
+    <img class="add-icon" src="../assets/controls_icons/add_department.svg" alt="add icon" id="add-icon">
+    <header class="card-title">Add employee</header>
+    </a>
+  </div>
 {{#each employees as |employee|}}
     <div class="card mx-2">
       {{> employeeDetails employee=employee}}
@@ -70,5 +29,7 @@
 </section>
   </container>
 </div>
+
+
 
 <script src="/js/logout.js"></script>
