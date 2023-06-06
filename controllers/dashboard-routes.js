@@ -2,6 +2,7 @@ const router = require("express").Router();
 const employee = require("../models/employee");
 const role = require("../models/role");
 const department = require("../models/department");
+const withAuth = require("../utils/auth");
 
 router.get('/', (req, res) => {
   employee.findAll({

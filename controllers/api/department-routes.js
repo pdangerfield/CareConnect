@@ -1,8 +1,9 @@
 const { department } = require("../../models");
 const router = require("express").Router();
+const withAuth = require("../../utils/auth");
 
 // Get all departments and render the "departments" view template
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const departmentData = await department.findAll();
     const departments = departmentData.map((department) =>
@@ -36,7 +37,7 @@ router.get("/edit", async (req, res) => {
 });
 
 // Get a single department
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const departmentId = req.params.id;
     const selectedDepartment = await department.findByPk(departmentId);
@@ -50,7 +51,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Add a department
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const { name } = req.body;
 
@@ -64,7 +65,7 @@ router.post("/", async (req, res) => {
 });
 
 // Update a department
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const departmentId = req.params.id;
     const { name } = req.body;
@@ -86,7 +87,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete a department
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const departmentId = req.params.id;
 
