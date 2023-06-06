@@ -9,7 +9,7 @@
 </head>
 
 
-<div class="row d-flex">
+<div class="row window d-flex">
   {{!-- controls --}}
   <container class="col-3" id="dashboard-controls">
     <div class="row">
@@ -29,9 +29,10 @@
             Employees
             </a>
         </li>
-        <li class="dashboard_menu_item_active">
+        <li class="active dashboard_menu_item">
           <a  href="/api/departments">
-            <img src="/assets/controls_icons/Departments_Icon_Active.svg" alt="dashboard icon">Departments
+            <img src="/assets/controls_icons/Departments_Icon_Active.svg" alt="dashboard icon">
+            Departments
           </a>
         </li>
       </ul>
@@ -53,6 +54,13 @@
     <h1 class="display-label">Departments</h1>
 
 
+<section class="card-container">
+  {{#each departments as |department|}}
+    <div class="card mx-2">
+      {{> department-details}}
+    </div>
+  {{/each}}
+</section>
 <section class="card-container">
   {{#each departments as |department|}}
     <div class="card mx-2">

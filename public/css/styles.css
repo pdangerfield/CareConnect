@@ -26,9 +26,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+.window {
+  height: 100vh;
+}
 /* dashboard controls */
-
-
 
 ::placeholder {
   color: var(--navy);
@@ -90,6 +91,14 @@ button {
   text-align: right;
 }
 
+#logout:hover {
+  cursor: pointer;
+}
+
+#profile:hover {
+  cursor: pointer;
+}
+
 /* -dashboard controls */
 
 #vertical-logo{
@@ -112,7 +121,7 @@ button {
 
 #dashboard-controls {
   background-color: var(--navy);
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   height: fill-available;
 }
 
@@ -202,6 +211,11 @@ input {
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-left: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
 }
 
 .card-container {
