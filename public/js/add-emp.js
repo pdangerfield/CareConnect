@@ -1,6 +1,6 @@
 
 const newEmpFormHandler = async (event) => {
-    console.log("test");
+    //console.log("test");
     event.preventDefault();
 
     const first_name = document.querySelector('input[name="first_name"]').value.trim();
