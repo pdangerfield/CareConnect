@@ -1,11 +1,11 @@
-const deleteDeptFormHandler = async (event) => {
+const deleteEmpFormHandler = async (event) => {
     event.preventDefault();
     
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length -1
     ];
   
-    const response = await fetch(`/api/departments/${id}`, {
+    const response = await fetch(`/api/employees/${id}`, {
             method: 'DELETE',
             body: JSON.stringify({ id }),
             headers: { 'Content-Type': 'application/json' }
@@ -13,10 +13,10 @@ const deleteDeptFormHandler = async (event) => {
 
         if (response.ok) {
             alert("post Deleted successfully!!");
-            document.location.replace('/api/departments/');
+            document.location.replace('/api/employees/');
         } else {
             alert(response.statusText);
         }
 }
 
-document.querySelector('.delete-dept-btn').addEventListener('submit', deleteDeptFormHandler);
+document.querySelector('.delete-emp-btn').addEventListener('submit', deleteEmpFormHandler);
