@@ -1,4 +1,3 @@
-
 <head>
   <title>CareConnect</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -6,11 +5,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
 
-
-<div class="row window d-flex">
+<div class="row d-flex">
   {{!-- controls --}}
   <container class="col-3" id="dashboard-controls">
     <div class="row">
@@ -48,29 +46,23 @@
       </div>
       <div class="col-2 acct-controls">
        <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
-        <img src="/assets/controls_icons/profile_icon.svg" alt="profile icon" id="profile">
+        <img src="/assets/controls_icons/profile_icon.svg" alt="profile icon">
       </div>
     </nav>
-    {{!-- charts --}}
-    <div class="chart-container row mx-3 my-6">
-      <div>
-        <h2 class="chart-label">Employees per department</h2>
-        <div id="employee-chart-container">
-          {{> chart1}}
-        </div>
-      </div>
-      <div>
-        <h2 class="chart-label">Cost by department</h2>
-        <div id="cost-chart-container">
-          {{!-- <canvas id="myChart"></canvas> --}}
-        </div>
-      </div>
+    <h1 class="display-label">Employees</h1>
+
+
+<section class="card-container">
+{{#each employees as |employee|}}
+    <div class="card">
+       <img src="/assets/employee_images/{{employee.id}}.png" alt="{{employee.first_name}} {{employee.last_name}}">
+  <header class="card-title">{{employee.first_name}} {{employee.last_name}}</header>
+  <p>{{employee.role_id}}</p>
     </div>
+  {{/each}}
+  
+</section>
   </container>
 </div>
 
 <script src="/js/logout.js"></script>
-
-
-
-

@@ -4,7 +4,7 @@ const role = require("../models/role");
 const department = require("../models/department");
 const withAuth = require("../utils/auth");
 
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/', (req, res) => {
   employee.findAll({
     include: [{ model: role, include: [department] }]
   })
@@ -21,7 +21,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         };
       });
 
-      res.render('homepage', { processedData: JSON.stringify(processedData) });
+      res.render('dashboard', { processedData: JSON.stringify(processedData) });
     })
     .catch((error) => {
       console.error('Error:', error);

@@ -17,7 +17,7 @@
     <div class="row dashboard-menu">
       <ul>
         <li class="dashboard_menu_item">
-          <a href="/api/dashboard">
+          <a href="/dashboard">
               <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="dashboard icon">
               Dashboard 
           </a>
@@ -51,7 +51,9 @@
       </div>
     </nav>
     <h1 class="display-label">Employees</h1>
-
+<div>
+      <button class="btn btn-primary">New Employee</button>
+    </div>
 
 <section class="card-container">
 {{#each employees as |employee|}}
@@ -60,14 +62,6 @@
     </div>
   {{/each}}
 </section>
-<section class="card-container">
-{{#each employees as |employee|}}
-    <div class="card mx-2">
-      {{> employee-details employee=employee}}
-    </div>
-  {{/each}}
-</section>
-
   </container>
 </div>
 

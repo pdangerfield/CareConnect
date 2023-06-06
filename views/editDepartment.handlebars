@@ -1,0 +1,38 @@
+<a href="/api/departments/edit"> &laar; Back to Department</a>
+<h1>Edit Department</h1>
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        /* Add additional styling for the card */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+
+<section class="card-container">
+    <form class="new-dept-form">
+        <div class="card">
+            <div>
+                <label for="dept-name"><b>Department-Name</b></label>
+                <input class="input" type="text" id="dept-name" name="dept-name" />
+            </div>
+
+            <button class="button" type="submit"> Edit </button>
+            <button class="button delete-dept-btn" type="submit"> Delete </button>
+        </div>
+    </form>
+</section>
+
+
+<script src="/javascript/edit-dept.js"></script>
+<script src="/javascript/delete-dept.js"></script>

@@ -1,5 +1,6 @@
 const withAuth = require("../../utils/auth");
-const { employee } = require("../../models");
+const { employee, role } = require("../../models");
+
 const router = require("express").Router();
 
 // Get all employees from the database and serialize them
@@ -16,17 +17,31 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-// Get a single employee
-router.get("/:id", withAuth, async (req, res) => {
+// Get all employees from the database and serialize them for "New Employee" view template
+router.get("/add", async (req, res) => {
   try {
-    const employeeId = req.params.id;
-    const selectedEmployee = await employee.findByPk(employeeId);
-
-    // Handle the retrieved employee data (e.g., send it as a response)
-    res.render("employees", { selectedEmployee });
+      const roleData = await role.findAll();
+      const roles = roleData.map((role) =>
+      role.get({ plain: true })
+    );
+    res.render("New-employee", { roles});
   } catch (error) {
     console.error(error);
-    res.status(500).send("An error occurred while retrieving the employee.");
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
+
+// Get all employees from the database and serialize them for "Edit Employee" view template
+router.get("/edit", async (req, res) => {
+  try {
+      const roleData = await role.findAll();
+      const roles = roleData.map((role) =>
+      role.get({ plain: true })
+    );
+    res.render("New-employee", { roles});
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
   }
 });
 
@@ -37,7 +52,7 @@ router.get("/:id", withAuth, async (req, res) => {
     const selectedEmployee = await employee.findByPk(employeeId);
 
     // Handle the retrieved department data (e.g., send it as a response)
-    res.render("employees", { employees: [selectedEmployee] });
+    res.render("employeeinfo", { employees: [selectedEmployee] });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred while retrieving the department.");
