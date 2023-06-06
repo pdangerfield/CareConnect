@@ -29,6 +29,7 @@ h2 {
 .window {
   height: 100vh;
 }
+
 /* dashboard controls */
 
 ::placeholder {
@@ -44,10 +45,14 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
   width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .link {
@@ -68,9 +73,15 @@ button {
 }
 
 .sign-up {
+  margin-top: 20px;
   color: var(--navy);
   font-size: 24px;
   font-weight: bold;
+  width: auto;
+}
+
+#sign-up-link{
+  margin-top: 20px;
 }
 
 /* ----- dashboard ----- */
@@ -107,7 +118,7 @@ button {
 }
 
 .dashboard-menu {
-  margin-left: 100px;
+  margin-left: 40px;
 }
 
 .dashboard_menu_item {
@@ -121,7 +132,6 @@ button {
 
 #dashboard-controls {
   background-color: var(--navy);
-  /* margin-bottom: 20px; */
   height: fill-available;
 }
 
@@ -236,5 +246,50 @@ input {
   margin-top: 20px;
 }
 
+/* Add Dept/Employee */
 
+.add-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-card {
+    width: calc(90%);
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-left: 30px;
+}
+  
+#title {
+  margin: 0px 0 20px 0;
+  font-size: 24px;
+}
+
+select {
+  border: 3px solid var(--navy);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
+#back-icon {
+  margin-left: 40px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+}
 
