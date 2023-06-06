@@ -10,6 +10,27 @@
         "department_id": 1
     },
     {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 1
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 1
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 1
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 1
+    },
+
+    {
         "title": "Doctor",
         "salary": 55000,
         "department_id": 2
@@ -17,6 +38,26 @@
     {
         "title": "Nurse",
         "salary": 25000,
+        "department_id": 2
+    },
+    {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 2
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 2
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 2
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
         "department_id": 2
     },
     {
@@ -30,6 +71,26 @@
         "department_id": 3
     },
     {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 3
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 3
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 3
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 3
+    },
+    {
         "title": "Doctor",
         "salary": 55000,
         "department_id": 4
@@ -40,13 +101,43 @@
         "department_id": 4
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 4
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 4
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 4
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 4
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
         "department_id": 5
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
+        "title": "Lab-Tec",
+        "salary": 12000,
+        "department_id": 5
+    },
+    {
+        "title": "phlebotomist",
+        "salary": 10000,
+        "department_id": 5
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
         "department_id": 5
     },
     {
@@ -60,15 +151,36 @@
         "department_id": 6
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 6
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 6
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 6
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 6
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
         "department_id": 7
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
+        "title": "Team-Lead",
+        "salary": 15000,
         "department_id": 7
     },
+
     {
         "title": "Doctor",
         "salary": 55000,
@@ -77,6 +189,26 @@
     {
         "title": "Nurse",
         "salary": 25000,
+        "department_id": 8
+    },
+    {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 8
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 8
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 8
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
         "department_id": 8
     },
     {
@@ -90,6 +222,26 @@
         "department_id": 9
     },
     {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 9
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 9
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 9
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 9
+    },
+    {
         "title": "Doctor",
         "salary": 55000,
         "department_id": 10
@@ -98,5 +250,83 @@
         "title": "Nurse",
         "salary": 25000,
         "department_id": 10
+    },
+    {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 10
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 10
+    },
+    
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 10
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 10
+    },
+    {
+        "title": "Doctor",
+        "salary": 55000,
+        "department_id": 11
+    },
+    {
+        "title": "Nurse",
+        "salary": 25000,
+        "department_id": 11
+    },
+    {
+        "title": "Medical Assistant",
+        "salary": 15000,
+        "department_id": 11
+    },
+    {
+        "title": "Trainee",
+        "salary": 5000,
+        "department_id": 11
+    },
+    
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 11
+    },
+    {
+        "title": "Team-Lead",
+        "salary": 15000,
+        "department_id": 11
+    },
+    {
+        "title": "Staff",
+        "salary": 10000,
+        "department_id": 12
+    },
+    {
+        "title": "Receptionist",
+        "salary": 5000,
+        "department_id": 12
+    },
+    {
+        "title": "Billing",
+        "salary": 15000,
+        "department_id": 12
+    },
+    {
+        "title": "HR Manager",
+        "salary": 25000,
+        "department_id": 12
+    },
+    {
+        "title": "Facility and planning management",
+        "salary": 15000,
+        "department_id": 12
     }
+
 ]
