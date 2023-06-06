@@ -1,129 +1,26 @@
-<a href="/api/departments/add"> &laar; Back to Department</a>
-<h1>Create New Department</h1>
-<style>
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .card {
-        width: calc(33.33% - 20px);
-        margin-bottom: 20px;
-        /* Add additional styling for the card */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-</style>
-
-<section class="card-container">
-    <form class="new-dept-form">
-        <div class="card">
-            <div>
-                <label for="dept-name"><b>Department-Name</b></label>
-                <input class="input" type="text" id="dept-name" name="dept-name" />
-            </div>
-            <button type="submit" class="button is primary">Add</button>
-            <button class="button" type="submit"> Update </button>
-    <button class="button delete-dept-btn" type="submit"> Delete </button>
-        </div>
-    </form>
-</section>
-
-<script src="/javascript/add-dept.js"></script>
-<script src="/javascript/edit-dept.js"></script>
-<script src="/javascript/delete-dept.js"></script><head>
-    <title>CareConnect</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
-</head>
-
-<div class="row d-flex">
-    {{!-- controls --}}
-    <container class="col-3" id="dashboard-controls">
-        <div class="row">
-            <img src="/assets/logos/vertical_logo.svg" alt="logo" class="logo" id="vertical-logo">
-        </div>
-        <div class="row dashboard-menu">
-            <ul>
-                <li class="dashboard_menu_item">
-                    <a href="/api/dashboard">
-                        <img src="/assets/controls_icons/dashboard_icon_active.svg" alt="dashboard icon">
-                        Dashboard
-                    </a>
-                </li>
-                <li class="dashboard_menu_item">
-                    <a href="/api/employees">
-                        <img src="/assets/controls_icons/Employee_Icon_Inactive.svg" alt="dashboard icon">
-                        Employees
-                    </a>
-                </li>
-                <li class="dashboard_menu_item">
-                    <a href="/api/departments">
-                        <img src="/assets/controls_icons/Departments_Icon_Inactive.svg" alt="dashboard icon">
-                        Departments
-                    </a>
-                </li>
-                <li class="dashboard_menu_item">
-                    <a href="/api/roles">
-                        <img src="/assets/controls_icons/departments_icon_active.svg" alt="dashboard icon">
-                        Roles
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </container>
+{{> dashboardControls }}
+  </container>
     {{!-- display --}}
     <container class="col-9" id="dashboard-display">
         {{!-- nav bar --}}
         <nav class="row my-4 nav-bar">
             <div class="col-10">
-                <input type="text" placeholder="name, role, or department" id="search-bar" name="search-bar">
+                
             </div>
             <div class="col-2 acct-controls">
                 <img src="/assets/controls_icons/logout_icon.svg" alt="logout icon" id="logout">
-                <img src="/assets/controls_icons/profile_icon.svg" alt="profile icon">
             </div>
         </nav>
-        
 
-        <h1>Create New Department</h1>
-        <style>
-            .card-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+        <h1 class="display-label">Create New Department</h1>
 
-            .card {
-                width: calc(33.33% - 20px);
-                margin-bottom: 20px;
-                /* Add additional styling for the card */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-        </style>
-
-        <section class="card-container">
+        <section class="add-card-container">
             <form class="new-dept-form">
-                <div class="card">
+                <div class="add-card">
                     <div>
-                        <label for="dept-name"><b>Department-Name</b></label>
-                        <input class="input" type="text" id="dept-name" name="dept-name" />
+                        <input class="input" type="text" placeholder="Name of new department" id="dept-name" name="dept-name" />
                     </div>
-                    <button  class="button  add-dept-btn" type="button" id="dept-add-btn">Add</button>
-                    <button class="button edit-dept-btn" type="button" id="dept-edit-btn"> Edit </button>
-                    <button class="button delete-dept-btn" type="button" id="dept-del-btn"> Delete </button>
+                    <button  class="button" type="submit" id="dept-add-btn">Add</button>
                 </div>
             </form>
         </section>
