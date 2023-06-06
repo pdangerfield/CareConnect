@@ -1,5 +1,6 @@
 const withAuth = require("../../utils/auth");
-const { employee } = require("../../models");
+const { employee, role } = require("../../models");
+
 const router = require("express").Router();
 
 // Get all employees from the database and serialize them
@@ -16,6 +17,33 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Get all employees from the database and serialize them for "New Employee" view template
+router.get("/add", async (req, res) => {
+  try {
+      const roleData = await role.findAll();
+      const roles = roleData.map((role) =>
+      role.get({ plain: true })
+    );
+    res.render("New-employee", { roles});
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
+
+// Get all employees from the database and serialize them for "Edit Employee" view template
+router.get("/edit", async (req, res) => {
+  try {
+      const roleData = await role.findAll();
+      const roles = roleData.map((role) =>
+      role.get({ plain: true })
+    );
+    res.render("New-employee", { roles});
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
 // // Get a single employee
 // router.get("/:id", async (req, res) => {
 //   try {

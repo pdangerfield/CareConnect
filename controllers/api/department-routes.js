@@ -15,6 +15,26 @@ router.get("/", async (req, res) => {
   }
 });
 
+//Get all departments and render the "New-departments" view template
+router.get("/add", async (req, res) => {
+  try {
+    res.render("New-department");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
+
+//Get all departments and render the "Edit-departments" view template
+router.get("/edit", async (req, res) => {
+  try {
+    res.render("New-department");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while retrieving the department.");
+  }
+});
+
 // Get a single department
 router.get("/:id", async (req, res) => {
   try {
