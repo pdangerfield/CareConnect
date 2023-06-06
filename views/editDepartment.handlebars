@@ -1,23 +1,40 @@
-<a href="/api/departments/edit"> &laar; Back to Department</a>
+{{> CSS }}
+<div class="row window d-flex">
+  {{!-- controls --}}
+  <container class="col-3" id="dashboard-controls">
+    <div class="row">
+      <img src="/assets/logos/vertical_logo.svg" alt="logo" class="logo" id="vertical-logo">
+    </div>
+    <div class="row dashboard-menu">
+      <ul>
+        <li class="dashboard_menu_item">
+          <a href="/dashboard">
+              <img src="/assets/controls_icons/Dashboard_Icon_Inactive.svg" alt="controls icon">
+              Dashboard 
+          </a>
+         </li>
+         <li class="dashboard_menu_item">
+          <a href="/api/employees">
+            <img src="/assets/controls_icons/Employee_Icon_Inactive.svg" alt="employees icon">
+            Employees
+            </a>
+        </li>
+        <li class="dashboard_menu_item">
+          <a href="/api/departments">
+            <img src="/assets/controls_icons/Departments_Icon_Active.svg">
+            <span id="active-label">Departments</span>
+          </a>
+        </li>
+        <li class="dashboard_menu_item">
+          <a  href="/api/roles">
+            <img src="/assets/controls_icons/roles_icon.svg" alt="roles icon">
+            <span>Roles</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </container>
 <h1>Edit Department</h1>
-<style>
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .card {
-        width: calc(33.33% - 20px);
-        margin-bottom: 20px;
-        /* Add additional styling for the card */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-</style>
 
 <section class="card-container">
     <form class="new-dept-form">

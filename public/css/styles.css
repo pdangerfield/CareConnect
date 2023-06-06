@@ -29,6 +29,7 @@ h2 {
 .window {
   height: 100vh;
 }
+
 /* dashboard controls */
 
 ::placeholder {
@@ -44,10 +45,14 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
   width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .link {
@@ -68,16 +73,22 @@ button {
 }
 
 .sign-up {
+  margin-top: 20px;
   color: var(--navy);
   font-size: 24px;
   font-weight: bold;
+  width: auto;
+}
+
+#sign-up-link{
+  margin-top: 20px;
 }
 
 /* ----- dashboard ----- */
 
 /* - nav - */
 .nav-bar {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -102,12 +113,13 @@ button {
 /* -dashboard controls */
 
 #vertical-logo{
-  margin-top: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
   height: 120px;
 }
 
 .dashboard-menu {
-  margin-left: 100px;
+  margin-left: 40px;
 }
 
 .dashboard_menu_item {
@@ -121,7 +133,6 @@ button {
 
 #dashboard-controls {
   background-color: var(--navy);
-  /* margin-bottom: 20px; */
   height: fill-available;
 }
 
@@ -180,9 +191,14 @@ input {
   margin-top: 50px;
 }
 
+#chart-label {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 /* ----- departments ----- */
 .display-label {
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 30px;
   margin-bottom: 20px;
 }
@@ -236,5 +252,71 @@ input {
   margin-top: 20px;
 }
 
+/* Add Dept/Employee */
 
+.add-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.add-card {
+    width: calc(90%);
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-left: 30px;
+}
+
+.add-dept-card-container {
+  width: calc(90%);
+}
+  
+#title {
+  margin: 0px 0 20px 0;
+  font-size: 24px;
+}
+
+select {
+  border: 3px solid var(--navy);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--navy);
+  background-color: var(--cream);
+}
+
+#back-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+#back-button {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin-left: 0px;
+  background-color: var(--cream);
+  /* border: 2px solid var(--navy); */
+  color: var(--navy);
+}
+
+#back-button:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#active-label {
+  color: var(--cream);
+}
