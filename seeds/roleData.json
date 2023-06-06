@@ -1,331 +1,297 @@
 [
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 1
+    "title": "Doctor - Orthopaedic",
+    "salary": 55000,
+    "department_id": 1
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 1
+    "title": "Nurse - Orthopaedic",
+    "salary": 25000,
+    "department_id": 1
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 1
+    "title": "Medical Assistant - Orthopaedic",
+    "salary": 15000,
+    "department_id": 1
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 1
+    "title": "Trainee - Orthopaedic",
+    "salary": 5000,
+    "department_id": 1
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 1
+    "title": "Staff - Orthopaedic",
+    "salary": 10000,
+    "department_id": 1
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 1
+    "title": "Team-Lead - Orthopaedic",
+    "salary": 15000,
+    "department_id": 1
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 2
+    "title": "Doctor - Neurology",
+    "salary": 55000,
+    "department_id": 2
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 2
+    "title": "Nurse - Neurology",
+    "salary": 25000,
+    "department_id": 2
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 2
+    "title": "Medical Assistant - Neurology",
+    "salary": 15000,
+    "department_id": 2
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 2
+    "title": "Trainee - Neurology",
+    "salary": 5000,
+    "department_id": 2
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 2
+    "title": "Staff - Neurology",
+    "salary": 10000,
+    "department_id": 2
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 2
+    "title": "Team-Lead - Neurology",
+    "salary": 15000,
+    "department_id": 2
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 3
+    "title": "Doctor - Pediatrics",
+    "salary": 55000,
+    "department_id": 3
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 3
+    "title": "Nurse - Pediatrics",
+    "salary": 25000,
+    "department_id": 3
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 3
+    "title": "Medical Assistant - Pediatrics",
+    "salary": 15000,
+    "department_id": 3
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 3
+    "title": "Trainee - Pediatrics",
+    "salary": 5000,
+    "department_id": 3
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 3
+    "title": "Staff - Pediatrics",
+    "salary": 10000,
+    "department_id": 3
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 3
+    "title": "Team-Lead - Pediatrics",
+    "salary": 15000,
+    "department_id": 3
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 4
+    "title": "Doctor - Cardiology",
+    "salary": 55000,
+    "department_id": 4
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 4
+    "title": "Nurse - Cardiology",
+    "salary": 25000,
+    "department_id": 4
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 4
+    "title": "Medical Assistant - Cardiology",
+    "salary": 15000,
+    "department_id": 4
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 4
+    "title": "Trainee - Cardiology",
+    "salary": 5000,
+    "department_id": 4
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 4
+    "title": "Staff - Cardiology",
+    "salary": 10000,
+    "department_id": 4
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 4
+    "title": "Team-Lead - Cardiology",
+    "salary": 15000,
+    "department_id": 4
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 5
+    "title": "Staff - Laboratory",
+    "salary": 10000,
+    "department_id": 5
     },
     {
-        "title": "Lab-Tec",
-        "salary": 12000,
-        "department_id": 5
+    "title": "Lab-Tec - Laboratory",
+    "salary": 12000,
+    "department_id": 5
     },
     {
-        "title": "phlebotomist",
-        "salary": 10000,
-        "department_id": 5
+    "title": "Phlebotomist - Laboratory",
+    "salary": 10000,
+    "department_id": 5
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 5
+    "title": "Team-Lead - Laboratory",
+    "salary": 15000,
+    "department_id": 5
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 6
+    "title": "Doctor - Gastroenterology",
+    "salary": 55000,
+    "department_id": 6
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 6
+    "title": "Nurse - Gastroenterology",
+    "salary": 25000,
+    "department_id": 6
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 6
+    "title": "Medical Assistant - Gastroenterology",
+    "salary": 15000,
+    "department_id": 6
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 6
+    "title": "Trainee - Gastroenterology",
+    "salary": 5000,
+    "department_id": 6
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 6
+    "title": "Staff - Gastroenterology",
+    "salary": 10000,
+    "department_id": 6
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 6
+    "title": "Team-Lead - Gastroenterology",
+    "salary": 15000,
+    "department_id": 6
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 7
+    "title": "Staff - Paramedics",
+    "salary": 10000,
+    "department_id": 7
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 7
+    "title": "Team-Lead - Paramedics",
+    "salary": 15000,
+    "department_id": 7
     },
-
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 8
+    "title": "Doctor - Psychiatry",
+    "salary": 55000,
+    "department_id": 8
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 8
+    "title": "Nurse - Psychiatry",
+    "salary": 25000,
+    "department_id": 8
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 8
+    "title": "Medical Assistant - Psychiatry",
+    "salary": 15000,
+    "department_id": 8
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 8
+    "title": "Trainee - Psychiatry",
+    "salary": 5000,
+    "department_id": 8
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 8
+    "title": "Staff - Psychiatry",
+    "salary": 10000,
+    "department_id": 8
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 8
+    "title": "Team-Lead - Psychiatry",
+    "salary": 15000,
+    "department_id": 8
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 9
+    "title": "Doctor - Inpatient",
+    "salary": 55000,
+    "department_id": 9
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 9
+    "title": "Nurse - Inpatient",
+    "salary": 25000,
+    "department_id": 9
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 9
+    "title": "Medical Assistant - Inpatient",
+    "salary": 15000,
+    "department_id": 9
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 9
+    "title": "Trainee - Inpatient",
+    "salary": 5000,
+    "department_id": 9
     },
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 9
+    "title": "Staff - Inpatient",
+    "salary": 10000,
+    "department_id": 9
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 9
+    "title": "Team-Lead - Inpatient",
+    "salary": 15000,
+    "department_id": 9
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 10
+    "title": "Doctor - Outpatient",
+    "salary": 55000,
+    "department_id": 10
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 10
+    "title": "Nurse - Outpatient",
+    "salary": 25000,
+    "department_id": 10
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 10
+    "title": "Medical Assistant - Outpatient",
+    "salary": 15000,
+    "department_id": 10
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 10
+    "title": "Trainee - Outpatient",
+    "salary": 5000,
+    "department_id": 10
     },
-    
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 10
+    "title": "Staff - Outpatient",
+    "salary": 10000,
+    "department_id": 10
     },
     {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 10
+    "title": "Team-Lead - Outpatient",
+    "salary": 15000,
+    "department_id": 10
     },
     {
-        "title": "Doctor",
-        "salary": 55000,
-        "department_id": 11
+    "title": "Doctor - Radiology",
+    "salary": 55000,
+    "department_id": 11
     },
     {
-        "title": "Nurse",
-        "salary": 25000,
-        "department_id": 11
+    "title": "Radiologist - Radiology",
+    "salary": 60000,
+    "department_id": 11
     },
     {
-        "title": "Medical Assistant",
-        "salary": 15000,
-        "department_id": 11
+    "title": "Technician - Radiology",
+    "salary": 12000,
+    "department_id": 11
     },
     {
-        "title": "Trainee",
-        "salary": 5000,
-        "department_id": 11
+    "title": "Team-Lead - Radiology",
+    "salary": 15000,
+    "department_id": 11
     },
-    
     {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 11
-    },
-    {
-        "title": "Team-Lead",
-        "salary": 15000,
-        "department_id": 11
-    },
-    {
-        "title": "Staff",
-        "salary": 10000,
-        "department_id": 12
-    },
-    {
-        "title": "Receptionist",
-        "salary": 5000,
-        "department_id": 12
-    },
-    {
-        "title": "Billing",
-        "salary": 15000,
-        "department_id": 12
-    },
-    {
-        "title": "HR Manager",
-        "salary": 25000,
-        "department_id": 12
-    },
-    {
-        "title": "Facility and planning management",
-        "salary": 15000,
-        "department_id": 12
+    "title": "Admin - Admin",
+    "salary": 50000,
+    "department_id": 12
     }
-
-]
+    ]
