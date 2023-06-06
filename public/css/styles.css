@@ -313,11 +313,10 @@ select {
   color: var(--navy);
 }
 
-=======
 
 .add-dept-card-container {
   width: calc(90%);
-
+}
 
   
 #title {
@@ -351,6 +350,7 @@ select {
   background-color: var(--cream);
   /* border: 2px solid var(--navy); */
   color: var(--navy);
+}
 
 #back-button:hover {
   box-shadow: none;
